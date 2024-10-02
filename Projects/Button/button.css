@@ -1,0 +1,50 @@
+  :root {
+    --apple-logo: #ec4458;
+    --white-color: #ffffff;
+    --apple-background: #ffb2b2;
+  }
+  div{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background-color: var(--white-color);
+    border: none;
+    font-size: 40px;
+    color: var(--apple-logo);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+.wave {
+    animation: wave-apple-effect 4s linear infinite;
+    animation-direction: normal;
+  }
+  .collapsible--expanded{
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+  }
+  .collapsible:active{
+    transform: rotate(0deg);
+    transition:  0.3s;
+  }
+  @keyframes wave-apple-effect {
+    0% {
+      box-shadow: 0 0 0 0px var(--apple-background),
+        0 0 0 0px var(--apple-background);
+    }
+    40% {
+      box-shadow: 0 0 0 50px rgba(60, 41, 188, 0),
+        0 0 0 0px var(--apple-background);
+    }
+    80% {
+      box-shadow: 0 0 0 50px rgba(60, 41, 188, 0), 0 0 0 30px rgba(0, 0, 0, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0px rgba(60, 41, 188, 0), 0 0 0 30px rgba(0, 230, 118, 0);
+    }
+  }

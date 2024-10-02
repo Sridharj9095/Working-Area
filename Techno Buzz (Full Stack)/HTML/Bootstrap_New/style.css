@@ -1,21 +1,147 @@
-*{
+*,
+*::before,
+*::after{
     box-sizing: border-box;
+}
+:root{
+  scroll-behavior: smooth;
 }
 body{
     margin: 0;
+    font-family: roboto;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
 }
 header nav{
-    background-color: #000000;
+    background-color: #000;
     display: flex;
     width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    height: 80px;
 }
 .nav_title{
+    margin-left: 30px;
+}
+.nav_title a{
     color: #fff;
+    font-size: 32px;
+}
+.nav_title::after{
+    content: ".";
+    color: #ffc451;
+    font-size: 32px;
 }
 .nav{
     list-style: none;
+    margin: 0 18px;
 }
-.nav a{
-    text-decoration: none;
+.nav_name{
     color: #fff;
+    font-size: 18px;
 }
+.nav_name:hover{
+    color: #ffc451;
+}
+.active{
+    color: #ffc451;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+.get_started{
+    background-color: #00000089;
+    padding: 10px 20px;
+    border-radius: 13px;
+    color: #fff;
+    border: 1px solid #ffc451;
+    font-size: 15px;
+}
+.get_started:hover{
+    background-color: #ffc451;
+    color: #000;
+}
+.nav ul{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    width: 182px;
+    top: 68px;
+    font-size: 18px;
+    align-items: flex-start;
+    padding: 10px 0;
+    transition: 0.3s;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+    z-index: 99;
+}
+.nav .dropdown{
+    visibility: hidden;
+    opacity: 0;
+}
+.dd_nav{
+    list-style: none;
+}
+.nav .dd_nav{
+    padding: 10px 20px;
+}
+.ddnav_name{
+    color: #00000096;
+    font-size: 15px;
+}
+.nav_name .fa-solid{
+    margin: 10px;
+    font-size: 15px;
+}
+.ddnav_name .fa-solid{
+    margin-left: 14px;
+    font-size: 15px;
+    transform: rotate(-90deg);
+}
+.dd_nav2:hover .fa-solid{
+    transform: rotate(0);
+    transition: ease-in-out .2s;
+}
+.dd_nav ul{
+    position: absolute;
+    right: 182px;
+    top: 44px;
+}
+.hero{
+    background-color: aquamarine;
+    height: 100vh;
+}
+.dd_nav:hover{
+    background-color: #ffc451;
+}
+.nav ul li{
+    width: 182px;
+}
+.ddd_nav{
+    list-style: none;
+}
+.dddnav_name{
+    color: #00000096;
+    font-size: 15px;
+}
+.ddnav_name ul li{
+    width: 182px;
+}
+.deep-drop li{
+    width: 182px;
+    padding: 10px 20px;
+}
+.ddd_nav:hover{
+    background-color: #ffc451;
+}
+.nav .dropdown_menu:hover > .dropdown {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }

@@ -43,8 +43,11 @@ header nav{
     font-size: 18px;
     align-items: center;
 }
-.nav_name:hover{
+.dropdown_menu:hover .nav_name{
     color: #ffc451;
+}
+.nav_name:hover{
+    color: #ffc451 ;
 }
 .active{
     color: #ffc451;
@@ -61,8 +64,8 @@ header nav ul{
 }
 .get_started{
     background-color: #00000089;
-    border-radius: 13px;
-    border: 1px solid #ffc451;
+    border-radius: 10px;
+    border: 2px solid #ffc451;
     color: #fff;
     font-size: 15px;
     padding: 10px 20px;
@@ -115,9 +118,8 @@ header nav ul{
 }
 .dd_nav:hover{
     background-color: #ffc451;
-}
-.dd_nav:hover .nav_hold{
-    color: #ffc451;
+    opacity: 1;
+    transition: ease 0.4s;
 }
 .nav ul li{
     min-width: 182px;
@@ -137,6 +139,8 @@ header nav ul{
 }
 .ddd_nav:hover{
     background-color: #ffc451;
+    opacity: 1;
+    transition: ease 0.4s;
 }
 .dropdown_menu .dropdown{
     display: none;
@@ -151,6 +155,6 @@ header nav ul{
     display: block;
 }
 .dropdown a{
-    padding: 15px 22px;
     font-size: 16px;
+    padding: 15px 22px;
 }

@@ -7,21 +7,21 @@
   scroll-behavior: smooth;
 }
 body{
-    margin: 0;
     font-family: roboto;
     font-size: 16px;
+    margin: 0;
 }
 a{
     text-decoration: none;
 }
 header nav{
+    align-items: center;
     background-color: #000;
     display: flex;
-    width: 100%;
-    align-items: center;
+    height: 80px;
     justify-content: space-around;
     padding: 0 50px;
-    height: 80px;
+    width: 100%;
 }
 .nav_title{
     margin-left: 30px;
@@ -31,8 +31,8 @@ header nav{
     font-size: 32px;
 }
 .nav_title::after{
-    content: ".";
     color: #ffc451;
+    content: ".";
     font-size: 32px;
 }
 .nav{
@@ -50,40 +50,40 @@ header nav{
     color: #ffc451;
 }
 header nav ul{
-    display: flex;
     align-items: center;
+    display: flex;
     padding: 0px;
 }
 .get_started{
     background-color: #00000089;
-    padding: 10px 20px;
     border-radius: 13px;
-    color: #fff;
     border: 1px solid #ffc451;
+    color: #fff;
     font-size: 15px;
+    padding: 10px 20px;
 }
 .get_started:hover{
     background-color: #ffc451;
     color: #000;
 }
 .nav ul{
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    width: 182px;
-    top: 68px;
-    font-size: 18px;
     align-items: flex-start;
-    padding: 10px 0;
-    transition: 0.3s;
+    background-color: #fff;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     display: block;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    padding: 10px 0;
+    position: absolute;
+    top: 100%;
+    transition: 0.3s;
+    width: 182px;
     z-index: 99;
 }
 .nav .dropdown{
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
 }
 .dd_nav{
     list-style: none;
@@ -96,12 +96,12 @@ header nav ul{
     font-size: 15px;
 }
 .nav_name .fa-solid{
-    margin: 10px;
     font-size: 15px;
+    margin: 10px;
 }
 .ddnav_name .fa-solid{
-    margin-left: 14px;
     font-size: 15px;
+    margin-left: 14px;
     transform: rotate(-90deg);
 }
 .dd_nav2:hover .fa-solid{
@@ -142,6 +142,152 @@ header nav ul{
 }
 .nav .dropdown_menu:hover > .dropdown {
     opacity: 1;
+    top: calc(100% + 5px);
+    visibility: visible;
+  }*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+:root{
+  scroll-behavior: smooth;
+}
+body{
+    font-family: roboto;
+    font-size: 16px;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+header nav{
+    align-items: center;
+    background-color: #000;
+    display: flex;
+    height: 80px;
+    justify-content: space-around;
+    padding: 0 50px;
+    width: 100%;
+}
+.nav_title{
+    margin-left: 30px;
+}
+.nav_title a{
+    color: #fff;
+    font-size: 32px;
+}
+.nav_title::after{
+    color: #ffc451;
+    content: ".";
+    font-size: 32px;
+}
+.nav{
+    list-style: none;
+    margin: 0 18px;
+}
+.nav_name{
+    color: #fff;
+    font-size: 18px;
+}
+.nav_name:hover{
+    color: #ffc451;
+}
+.active{
+    color: #ffc451;
+}
+header nav ul{
+    align-items: center;
+    display: flex;
+    padding: 0px;
+}
+.get_started{
+    background-color: #00000089;
+    border-radius: 13px;
+    border: 1px solid #ffc451;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+.get_started:hover{
+    background-color: #ffc451;
+    color: #000;
+}
+.nav ul{
+    align-items: flex-start;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    padding: 10px 0;
+    position: absolute;
     top: 100%;
+    transition: 0.3s;
+    width: 182px;
+    z-index: 99;
+}
+.nav .dropdown{
+    opacity: 0;
+    visibility: hidden;
+}
+.dd_nav{
+    list-style: none;
+}
+.nav .dd_nav{
+    padding: 10px 20px;
+}
+.ddnav_name{
+    color: #00000096;
+    font-size: 15px;
+}
+.nav_name .fa-solid{
+    font-size: 15px;
+    margin: 10px;
+}
+.ddnav_name .fa-solid{
+    font-size: 15px;
+    margin-left: 14px;
+    transform: rotate(-90deg);
+}
+.dd_nav2:hover .fa-solid{
+    transform: rotate(0);
+    transition: ease-in-out .2s;
+}
+.dd_nav ul{
+    position: absolute;
+    right: 182px;
+    top: 44px;
+}
+.hero{
+    background-color: aquamarine;
+    height: 100vh;
+}
+.dd_nav:hover{
+    background-color: #ffc451;
+}
+.nav ul li{
+    width: 182px;
+}
+.ddd_nav{
+    list-style: none;
+}
+.dddnav_name{
+    color: #00000096;
+    font-size: 15px;
+}
+.ddnav_name ul li{
+    width: 182px;
+}
+.deep-drop li{
+    width: 182px;
+    padding: 10px 20px;
+}
+.ddd_nav:hover{
+    background-color: #ffc451;
+}
+.nav .dropdown_menu:hover > .dropdown {
+    opacity: 1;
+    top: calc(100% + 5px);
     visibility: visible;
   }

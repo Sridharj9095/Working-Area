@@ -13,6 +13,7 @@ body{
 }
 a{
     text-decoration: none;
+    color: #fff;
 }
 header{
     position: fixed;
@@ -20,7 +21,7 @@ header{
 }
 header nav{
     align-items: center;
-    background-color: #000;
+    background-color: #00000023;
     display: flex;
     height: 80px;
     justify-content: space-around;
@@ -67,7 +68,7 @@ header nav ul{
     display: flex;
 }
 .get_started{
-    background-color: #00000089;
+    background-color: transparent;
     border-radius: 10px;
     border: 2px solid #ffc451;
     color: #fff;
@@ -89,14 +90,14 @@ header nav ul{
     font-size: 18px;
     padding: 10px 0;
     position: absolute;
-    top: 70px;
+    top: 90px;
     width: 182px;
 }
 .dd_nav{
     list-style: none;
 }
 .ddnav_name{
-    color: #00000096;
+    color: #000000d7;
     font-size: 15px;
 }
 .nav_name .fa-solid{
@@ -110,12 +111,15 @@ header nav ul{
 }
 .dd_nav2:hover .fa-solid{
     transform: rotate(0);
-    transition: ease-in-out .2s;
+    transition: ease-in-out .3s;
+    position: relative;
+    left: -5px;
+    bottom: -2px;
 }
 .dd_nav2 ul{
     position: absolute;
-    right: 182px;
-    top: 44px;
+    right: 157px;
+    top: 58px;
 }
 .dd_nav:hover{
     background-color: #ffc451;
@@ -129,7 +133,7 @@ header nav ul{
     list-style: none;
 }
 .dddnav_name{
-    color: #00000096;
+    color: #000000d7;
     font-size: 15px;
 }
 .ddnav_name ul li{
@@ -144,53 +148,114 @@ header nav ul{
     transition: ease 0.4s;
 }
 .dropdown_menu .dropdown{
-    display: none;
+    visibility: hidden;
+    transition: opacity 0.4s;
+    opacity: 0;
 }
 .dropdown_menu:hover .dropdown{
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-25px);
+    transition: ease-in-out 0.3s;
 }
 .dropdown_menu:hover .deep-drop{
-    display: none;
+    visibility: hidden;
+    transition: opacity 0.5s;
+    opacity: 0;
 }
 .dd_nav2:hover .deep-drop{
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-25px);
+    transition: ease-in-out 0.3s;
 }
 .dropdown a{
     font-size: 16px;
     padding: 15px 22px;
 }
 .hero{
-    background-color: #000;
-    height: 100vh;
-    background-image: url();
+    background-image: url(source/hero_image.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
-    color: #fff;
     display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+.bg-opaque{
     align-items: center;
-    justify-content: center;
+    background-color: #000000b8;
+    display: flex;
     flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+.hero-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+.hero-content{
+    text-align: center;
+    width: 74%;
 }
 .hero_title{
-    font-size: 50px;
-    margin:0;
+    color: #fff;
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0 21px;
 }
 .hero_para{
-    margin-bottom: 20px;
+    color: #ffffffaf;
+    font-size: 24px;
+    margin: 10px 0;
 }
 .hero_rows{
     display: flex;
+    margin-top: 50px;
     width: 100%;
-    padding: 0 60px;
-    justify-content: space-between;
 }
 .box{
-    height: 200px;
-    width: 200px;
-    background-color: greenyellow;
-    margin: 20px 40px;
+    align-items: center;
+    background-color: #00000011;
+    border: 1px solid rgb(255 255 255 / 30%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
     flex: 1;
-    border-radius: 10px;
+    height: 100%;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: ease-in-out 0.3s;
+}
+.box .fa-solid{
+    color: #ffc451;
+    font-size: 30px;
+}
+.box h3 a{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+}
+.box h3{
+    margin: 10px 0 0 0;
+}
+.box-content a{
+    color: #ffffffc7;
+}
+.box:hover{
+    border-color: #ffc551b7;
+    transform: scale(1.02) translateY(-8px);
+    transition: ease-in-out 0.3s;
+}
+.box:hover h3 a{
+    color: #ffc451;
+    transition: ease-in-out 0.3s;
 }

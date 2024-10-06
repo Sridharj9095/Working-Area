@@ -1,0 +1,261 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+:root{
+    scroll-behavior: smooth;
+  }
+body{
+    margin: 0;
+    font-size: 16px;
+    font-family: Poppins;
+}
+a{
+    text-decoration: none;
+}
+.sticky-top{
+    position: sticky;
+}
+.branding_bar{
+    width: 100%;
+}
+.topbar{
+    background-color: #1977cc;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topbar_container{
+    display: flex;
+    margin: 0 80px;
+    padding: 0 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+.contact-info{
+    display: flex;
+    align-items: center;
+}
+.contact-info i a{
+    font-style: normal;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.contact-info i{
+    color: #fff;
+    font-size: 14px;
+    margin-left: 30px;
+}
+.contact-info a{
+    padding-left: 4px;
+}
+.contact-info a:hover{
+    text-decoration: underline;
+}
+.contact-info span{
+    padding-left: 4px;
+    color: #fff;
+    font-style: normal;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+}
+.social-links{
+    margin-right: 20px;
+}
+.social-links a
+{
+    padding-left: 14px;
+    font-size: 16px;
+}
+.social-links .fa-brands{
+    color: #ffffff8a;
+}
+.social-links .fa-brands:hover{
+    color: #fff;
+    transition: ease.3s;
+}
+.branding-content a{
+    font-family: Poppins;
+}
+.header .branding_bar{
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.branding-bar_container{
+    display: flex;
+    margin: 0 80px;
+    padding: 0 10px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.branding-bar_container ul{
+    display: flex;
+    position: relative;
+    left: 32px;
+}
+.logo{
+    font-size: 30px;
+    margin: 0;
+    font-weight: 800;
+    color: #2c4964;
+    margin-right: 50px;
+}
+.nav{
+    list-style: none;
+}
+.nav_name{
+    color: #000;
+    font-size: 18px;
+    align-items: center;
+}
+.dropdown_menu:hover .nav_name{
+    color: #1977cc;
+}
+.nav_name:hover{
+    color: #1977cc ;
+}
+.active{
+    color: #1977cc;
+}
+nav ul{
+    align-items: center;
+    display: flex;
+    margin: 0px;
+    padding: 0;
+}
+.nav a{
+    padding: 18px 15px;
+    display: flex;
+    font-weight: 300;
+    font-size: 15px;
+}
+.nav ul{
+    align-items: flex-start;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    padding: 10px 0;
+    position: absolute;
+    top: 90px;
+    width: 190px;
+    left: 390px;
+}
+.dd_nav{
+    list-style: none;
+}
+.ddnav_name{
+    color: #000000d7;
+    font-size: 15px;
+}
+.nav_name .fa-solid{
+    font-size: 15px;
+    margin: 10px;
+}
+.ddnav_name .fa-solid{
+    font-size: 15px;
+    margin-left: 14px;
+    transform: rotate(-90deg);
+}
+.dd_nav2:hover .fa-solid{
+    transform: rotate(0);
+    transition: ease-in-out .3s;
+    position: relative;
+    left: -5px;
+    bottom: -2px;
+}
+.dd_nav2 ul{
+    position: absolute;
+    top: 50px;
+    left: -165px;
+}
+.dd_nav:hover .ddnav_name{
+    color: #1977cc;
+    opacity: 1;
+    transition: ease 0.3s;
+}
+.nav ul li{
+    min-width: 189px;
+}
+.ddd_nav{
+    list-style: none;
+}
+.dddnav_name{
+    color: #000000d7;
+    font-size: 15px;
+}
+.ddnav_name ul li{
+    width: 182px;
+}
+.deep-drop li{
+    width: 182px;
+}
+.ddd_nav:hover a{
+    color: #1977cc;
+    opacity: 1;
+    transition: ease 0.3s;
+}
+.dropdown_menu .dropdown{
+    visibility: hidden;
+    transition: opacity 0.4s;
+    opacity: 0;
+}
+.dropdown_menu:hover .dropdown{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-25px);
+    transition: ease-in-out 0.3s;
+}
+.dropdown_menu:hover .deep-drop{
+    visibility: hidden;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+.dd_nav2:hover .deep-drop{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-25px);
+    transition: ease-in-out 0.3s;
+}
+.dropdown a{
+    font-size: 14px;
+    padding: 11px 18px;
+}
+.active_2::before{
+    content: "";
+    background-color: #1977cc;
+    font-size: 20px;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 2px;
+    width: 46px;
+    left: 11px;
+}
+.btn-appointment{
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #1977cc;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    position: relative;
+    left: 10px;
+    cursor: pointer;
+}
+.hero{
+    background-color: #1979cc80;
+    height: 100vh;
+}

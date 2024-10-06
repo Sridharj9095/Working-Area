@@ -25,7 +25,7 @@ body{
 }
 .fa-solid{
     align-items: center;
-    background-color: rgb(0 0 255);
+    background-color: blue;
     border-radius: 50%;
     color: #fff;
     display: flex;

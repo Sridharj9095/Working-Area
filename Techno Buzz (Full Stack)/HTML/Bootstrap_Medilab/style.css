@@ -16,12 +16,11 @@ a {
     text-decoration: none;
 }
 
-.sticky-top {
-    position: sticky;
-}
-
 .branding_bar {
     width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
 }
 
 .topbar {
@@ -119,7 +118,7 @@ a {
 .branding-bar_container ul {
     display: flex;
     position: relative;
-    left: 32px;
+    left: 16px;
 }
 
 .logo {
@@ -289,20 +288,19 @@ nav ul {
 }
 
 .btn-appointment {
-    padding: 10px 20px;
+    padding: 10px 18px;
     color: rgb(255, 255, 255);
     background-color: rgb(25, 119, 204);
     border: none;
     border-radius: 20px;
-    font-size: 13px;
+    font-size: 12px;
     position: relative;
-    left: 10px;
+    left: 14px;
     cursor: pointer;
 }
-
 .hero {
+    height: calc(112px + 100vh);
     background-image: url("source/hero-image.jpg");
-    min-height: calc(-112px + 100vh);
     width: 100%;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -310,6 +308,7 @@ nav ul {
     background-size: cover;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .hero-container {
@@ -326,11 +325,11 @@ nav ul {
     margin: 0px;
     font-size: 48px;
     font-weight: 700;
-    color: #2c4964;
+    color: rgb(44, 73, 100);
 }
 
 .hero-para {
-    font-size: 24px;
+    font-size: 22px;
     margin: 0px;
     color: rgb(73, 68, 68);
 }
@@ -356,7 +355,7 @@ nav ul {
     padding: 20px;
     border-radius: 4px;
     background-color: rgb(25, 119, 204);
-    width: 68%;
+    width: 46%;
 }
 
 .small-boxes {
@@ -367,8 +366,8 @@ nav ul {
 }
 
 .s-box {
-    padding: 40px 30px;
-    background-color: rgb(255 255 255 / 82%);
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.82);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 15px;
     width: 100%;
@@ -383,47 +382,214 @@ nav ul {
     text-align: start;
     font-weight: 700;
     font-size: 34px;
-    margin: 0px;
+    margin: 0px 0px 0px 20px;
     color: rgb(255, 255, 255);
-    margin-left: 20px;
+    line-height: 1.2;
 }
 
 .b-box p {
     margin-bottom: 20px;
     text-align: start;
     padding-left: 14px;
-    color: #fff;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
 }
 
 .s-box h4 {
     font-size: 20px;
     font-weight: 700;
     margin: 20px 0px 10px;
+    color: rgb(44, 73, 100);
+    line-height: 1.2;
 }
 
 .s-box p {
-    font-size: 15px;
+    font-size: 13px;
     color: rgba(0, 0, 0, 0.55);
-    margin:  6px 0;
+    margin: 6px 0px;
 }
 
 .learn-more {
     background-color: rgb(25, 119, 204);
-    padding: 6px 18px 8px;
+    padding: 6px 14px 8px;
     border-radius: 50px;
     border: 1px solid orange;
     transition: 0.4s ease-in-out;
-    width: 50%;
+    width: 60%;
 }
 
 .learn-more a {
     color: rgb(255, 255, 255);
 }
-.learn-more:hover a{
+
+.learn-more:hover a {
     color: rgb(25, 119, 204);
     transition: 0.4s ease-in-out;
 }
-.learn-more:hover{
-    background-color: #fff;
-    
+
+.learn-more:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.s-box:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.557);
+}
+
+.s-box:hover h4 {
+    color: rgb(255, 255, 255);
+    transition: 0.5s ease-in-out;
+}
+
+.s-box:hover p {
+    color: rgba(255, 255, 255, 0.616);
+    transition: 0.5s ease-in-out;
+}
+
+.s-box:hover i {
+    color: orange;
+    transition: 0.5s ease-in-out;
+}
+
+.sec-2 {
+    padding: 60px 0px;
+}
+
+.sec2-vcard {
+    display: flex;
+    margin: 0px 100px;
+    position: relative;
+}
+
+.sec2-vcard img {
+    width: 100%;
+    height: 300px;
+    margin-top: 14px;
+}
+
+.sec2-vcard a {
+    white-space: nowrap;
+    position: absolute;
+    top: 32%;
+    left: 21%;
+}
+
+.sec2-vcard a i {
+    align-items: center;
+    background-color: rgb(25, 119, 204);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    font-size: 20px;
+    height: 60px;
+    justify-content: center;
+    width: 60px;
+}
+
+.sec2-content {
+    padding: 0px 30px;
+}
+
+.sec2-content h3 {
+    font-size: 32px;
+    margin: 0px 0px 0px 2px;
+    color: rgba(0, 0, 0, 0.69);
+}
+
+.sec2-content p {
+    font-size: 15px;
+    margin: 0px;
+    color: rgba(0, 0, 0, 0.698);
+}
+
+.sec2-content ul {
+    list-style: none;
+    padding-left: 6px;
+}
+
+.sec2-content ul li {
+    display: flex;
+    margin-top: 20px;
+}
+
+.sec2-list_content {
+    padding: 0px 20px;
+}
+
+.sec2-list_content h5 {
+    margin: 0px 0px 8px;
+    color: rgb(44, 73, 100);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sec2-list_content p {
+    margin: 0px;
+    font-size: 15px;
+    font-family: Roboto;
+    padding-left: 2px;
+}
+
+.sec2-content ul li i {
+    font-size: 40px;
+    color: rgb(25, 119, 204);
+    margin-top: 10px;
+}
+
+.sec-3 {
+    width: 100%;
+    background-color: rgb(241, 247, 252);
+    padding: 60px 0px;
+}
+
+.service {
+    align-items: center;
+    display: flex;
+    padding: 0px 90px;
+    justify-content: space-between;
+    margin: 24px 0px 0px;
+}
+
+.serv-content {
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    padding: 20px;
+    width: -webkit-fill-available;
+    margin: 0px 20px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 35px;
+}
+
+.serv-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c-heading {
+    font-size: 32px;
+    margin: 36px 0px 8px;
+    color: rgb(44, 73, 100);
+}
+
+.c-para {
+    color: rgb(68, 68, 68);
+    font-size: 16px;
+    margin: 0px;
+}
+
+.serv-inner i {
+    font-size: 22px;
+    background-color: rgb(25 119 204);
+    color: rgb(255, 255, 255);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 130px;
 }

@@ -98,8 +98,10 @@ a{
 }
 .bottom-bar_container ul li{
     list-style: none;
+    align-items: center;
+    display: flex;
 }
-.bottom-bar_container ul li a{
+.bottom-bar_container ul li .a-tag{
     color: #000;
     margin: 0 4px 0 14px;
 }
@@ -108,16 +110,19 @@ a{
     color: #00000087;
     margin-left: 3px;
 }
-.bottom-bar_left ul li a{
+.bottom-bar_left ul li .a-tag{
     font-size: 12px;
     font-family: system-ui;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: ease 0.3s;
+    padding:  36px 0;
 }
 .bottom-bar_left ul{
     display: flex;
     padding: 0;
+    margin: 0;
+    height: 86px;
 }
 .bottom-bar_center{
     display: flex;
@@ -174,7 +179,7 @@ a{
 .login-menu a:hover{
     color: #1aada3;
 }
-.bottom-bar_left li:hover a{
+.bottom-bar_left li:hover .a-tag{
     color: #1aada3;
 }
 .bottom-bar_left li:hover i{
@@ -186,7 +191,63 @@ a{
 .cart-items .fa-heart:hover{
     color: red;
 }
+.cart-items .fa-cart-shopping:hover{
+    color: #1aada3;
+}
+.cart-items .fa-magnifying-glass:hover{
+    color: #1aada3;
+}
+.cart-items ul li i:hover{
+    cursor: pointer;
+}
+.cart-items ul .cart-price:hover{
+    cursor: pointer;
+}
+
+/* drop-down menu */
+.drop-down{
+    position: relative;
+}
+.drop-down .drop-down_menu{
+    position: absolute;
+    top: 96px;
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    height: 230px;
+    background-color: #fff;
+    justify-content: space-between;
+    padding: 20px 25px;
+    left: 10px;
+    border-radius: 4px;
+    box-shadow: 4px 8px 18px 0px grey;
+    visibility: hidden;
+}
+.drop-down:hover .drop-down_menu{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-25px);
+    transition: 0.2s ease-in;
+}
+.drop-down_menu .dd-list{
+    padding: 10px;
+}
+.drop-down_menu .dd-list:hover a{
+    color: #1aada3;
+}
+.drop-down_menu li a{
+    display: flex;
+    font-size: 14px;
+}
+.dd-name{
+    margin: 0;
+    color: #000000a3;
+}
+.dd-list .dd-name:hover{
+    transform: translateX(10px);
+    transition: all ease-in-out 0.3s;
+}
 .hero{
     height: 100vh;
-    background-color: rgba(128, 128, 128, 0.438);
+    background-image: url(source/hero-img.webp);
 }

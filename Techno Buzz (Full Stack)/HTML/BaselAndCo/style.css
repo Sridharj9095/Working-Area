@@ -83,7 +83,7 @@ a{
 }
 .bottom-hover a:hover:after {
     width: 100%;
-    left: 0
+    left: 0;
 }
 /* bottom-bar */
 .bottom-bar{

@@ -299,7 +299,6 @@ nav ul {
     cursor: pointer;
 }
 .hero {
-    height: calc(112px + 100vh);
     background-image: url("source/hero-image.jpg");
     width: 100%;
     overflow: hidden;
@@ -309,6 +308,7 @@ nav ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 60px 0;
 }
 
 .hero-container {
@@ -355,7 +355,8 @@ nav ul {
     padding: 20px;
     border-radius: 4px;
     background-color: rgb(25, 119, 204);
-    width: 46%;
+    width: 48%;
+    cursor: pointer;
 }
 
 .small-boxes {
@@ -371,6 +372,7 @@ nav ul {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 15px;
     width: 100%;
+    cursor: pointer;
 }
 
 .s-box i {
@@ -637,6 +639,7 @@ nav ul {
     align-items: center;
     justify-content: center;
     text-align: center;
+    cursor: pointer;
 }
 .stats-icon{
     margin: 0 auto;
@@ -688,4 +691,166 @@ nav ul {
 .stats-box:hover p{
     color: #fff;
     transition: ease-in-out 0.3s;
+}
+
+/* Make an Appointment section */
+.sec-5{
+    overflow: hidden;
+    background-color: rgba(176, 224, 230, 0.671);
+    padding: 60px 0;
+    color: #000;
+}
+.appoinment_container{
+    margin: 0 90px;
+}
+.apnt-heading{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.apnt-heading_title h2{
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 0;
+    color: #000000b0;
+    position: relative;
+    cursor: pointer;
+}
+.apnt-heading_title h2::before{
+    content: " ";
+    width: 0px;
+    background-color: #ff004085;
+    height: 2px;
+    position: absolute;
+    top: 50px;
+    visibility: hidden;
+    transition: width 0.5s;
+}
+.apnt-heading_title>h2:hover::before{
+    visibility: visible;
+    width: 100%;
+}
+.apnt-heading_para p{
+    font-size: 15px;
+    margin-bottom: 36px;
+    margin-top: 0;
+    color: #000000c5;
+}
+.apnt-form{
+    padding: 0 10px;
+}
+.apnt-form_rows{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+.apnt-form_rows input{
+    flex: 1;
+    height: 45px;
+    margin-right: 30px;
+    outline: 0;
+    border: 1px solid #0000002c;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-family: poppins;
+    border-radius: 6px;
+}
+.apnt-form_rows input:focus{
+    outline: 1px solid rgba(0, 0, 255, 0.541);
+    opacity: 1;
+}
+.apnt-form_rows input::placeholder{
+    opacity: 0.5;
+}
+.apnt-form_rows select{
+    flex: 1;
+    height: 40px;
+    margin-right: 30px;
+    outline: 0;
+    border: 1px solid #0000002c;
+    padding: 5px 10px;
+    opacity: 0.85;
+    border-radius: 6px;
+}
+.apnt-form_rows select:focus{
+    outline: 1px solid rgba(0, 0, 255, 0.541);
+}
+.apnt-textarea{
+    margin: 30px 0px;
+}
+.apnt-textarea textarea{
+    width: 97%;
+    height: 120px;
+    outline: 0;
+    border: 1px solid #0000002c;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-family: poppins;
+    border-radius: 6px;
+}
+.apnt-textarea textarea::placeholder{
+    opacity: 0.5;
+}
+.apnt-textarea textarea:focus{
+    outline: 1px solid rgba(0, 0, 255, 0.541);
+    opacity: 1;
+}
+.apnt-form button{
+    border: 0;
+    padding: 16px 30px;
+    font-size: 16px;
+    text-transform: capitalize;
+    border-radius: 50px;
+    transition: ease-in-out .3s;
+    margin: 0 39%;
+    background-color: #1977cc;
+    color: #fff;
+}
+.apnt-form button:hover{
+    background-color: orange;
+    color: #000000a2;
+}
+
+/* Footer bar */
+.copyright{
+    background-color: #fff;
+    padding: 20px 0;
+    margin: 0 90px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.copyright-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+}
+.copyright-header i{
+    font-size: 12px;
+}
+.copyright-header h4{
+    padding: 0 6px;
+    font-weight: 400;
+    font-size: 14px;
+}
+.copyright-header h4 span{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 2px;
+}
+.copyright p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 13px;
+}
+.copyright p a{
+    margin-left: 5px;
+    color: #1977cc;
+}
+.copyright p a:hover{
+    color: #2c4964;
 }

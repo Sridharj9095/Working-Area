@@ -461,37 +461,15 @@ nav ul {
 
 .sec2-vcard {
     display: flex;
-    margin: 0px 100px;
-    position: relative;
+    margin: 0px 90px;
 }
-
-.sec2-vcard img {
+.sec2-video{
     width: 100%;
-    height: 300px;
-    margin-top: 14px;
+    flex: 1;
 }
-
-.sec2-vcard a {
-    white-space: nowrap;
-    position: absolute;
-    top: 140px;
-    left: 230px;
-}
-
-.sec2-vcard a i {
-    align-items: center;
-    background-color: rgb(25, 119, 204);
-    border-radius: 50%;
-    color: white;
-    display: flex;
-    font-size: 20px;
-    height: 60px;
-    justify-content: center;
-    width: 60px;
-}
-
 .sec2-content {
     padding: 0px 30px;
+    flex: 1;
 }
 
 .sec2-content h3 {

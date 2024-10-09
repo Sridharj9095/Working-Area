@@ -10,36 +10,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="header" class="header sticky-top">
-        <div class="topbar">
-            <div class="topbar_container">
-                <div class="contact-info">
-                    <i class="fa-regular fa-envelope">
-                        <a href="mailto:contact@example.com">contact@example.com</a>
-                    </i>
-                    <i class="fa-solid fa-mobile"></i>
-                        <span>+1 8654 64765 55</span>
-                    </i>
-                </div>
-                <div class="social-links">
-                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="branding_bar">
+    <header id="header" class="header">
+        <div class="branding_bar top-bar">
             <div class="branding-bar_container">
                 <a href="">
                     <h1 class="logo">Medilab</h1>
                 </a>
                 <nav>
                     <ul>
-                        <li class="nav"><a href="" class="nav_name active active_2">Home</a></li>
-                        <li class="nav"><a href="" class="nav_name">About</a></li>
-                        <li class="nav"><a href="" class="nav_name">Services</a></li>
-                        <li class="nav"><a href="" class="nav_name">Departments</a></li>
+                        <li class="nav"><a href="#home" class="nav_name active active_2">Home</a></li>
+                        <li class="nav"><a href="#about" class="nav_name">About</a></li>
+                        <li class="nav"><a href="#service" class="nav_name">Services</a></li>
+                        <li class="nav"><a href="#departments" class="nav_name">Departments</a></li>
                         <li class="nav"><a href="" class="nav_name">Doctors</a></li>
                         <li class="nav dropdown_menu">
                             <a href="" class="nav_name">Dropdown<i class="fa-solid fa-angle-down"></i></a>
@@ -64,13 +46,23 @@
                     </ul>
                 </nav>
                 <div class="branding-content">
-                    <a href="" class="btn-appointment">Make an Appointment</a>
+                    <a href="#appointment" class="btn-appointment">Make an Appointment</a>
                 </div>
             </div>
         </div>
     </header>
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-container">
+            <div class="vertical-menu">
+                <div class="vertical-menu_container">
+                    <div class="social-links">
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
             <div class="hero-header">
                 <h2 class="hero-title">WELCOME TO MEDILAB</h2>
                 <p class="hero-para">We are team of talented designers making websites with Bootstrap</p>
@@ -105,9 +97,9 @@
             </div>
         </div>
     </section>
-    <section class="sec-2">
+    <section class="sec-2" id="about">
         <div class="sec2-vcard">
-            <iframe class="sec2-video" width="560" height="315" src="https://www.youtube.com/embed/erei6SZjcck?si=DVdxLlxwSMVUi3sN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe class="sec2-video" width="560" height="315" src="https://www.youtube.com/embed/erei6SZjcck?si=DVdxLlxwSMVUi3sN" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
             <div class="sec2-content">
                 <h3>About Us</h3>
                 <p>Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis veritatis asperiores placeat.</p>
@@ -137,7 +129,7 @@
             </div>
         </div>
     </section>
-    <section class="sec-3">
+    <section class="sec-2a">
         <div class="service">
                 <div class="serv-content">
                     <div class="serv-inner">
@@ -169,7 +161,7 @@
                 </div>
         </div>
     </section>
-    <section class="sec-4 stats">
+    <section class="sec-3 stats" id="service">
         <div class="stats-container">
             <div class="stats-heading">
                 <div class="stats-heading_title">
@@ -229,8 +221,42 @@
             </div>
         </div>
     </section>
-    <section class="sec-5">
-        <div class="appoinment_container">
+    <section class="sec-4" id="departments">
+        <div class="dprt-container">
+            <div class="dprt-heading">
+                <div class="dprt-heading_title">
+                    <h2>Departments</h2>
+                </div>
+                <div class="dprt-heading_para">
+                    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                </div>
+            </div>
+            <div class="dprt-content">
+                <div class="dprt-content_col1">
+                    <ul>
+                        <li><a href="">Cardiology</a></li>
+                        <li><a href="">Neurology</a></li>
+                        <li><a href="">Hepatology</a></li>
+                        <li><a href="">Pediatrics</a></li>
+                        <li><a href="">Eye Care</a></li>
+                    </ul>
+                </div>
+                <div class="dprt-content_col2">
+                    <div class="dprt-content_col2__content">
+                        <div class="col2-row1">
+                            <div class="col2-row1_details">
+                                <h3></h3>
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-7" id="appointment">
+        <div class="appointment_container">
             <div class="apnt-heading">
                 <div class="apnt-heading_title">
                     <h2>Appointment</h2>
@@ -263,7 +289,7 @@
                 <div class="apnt-textarea">
                     <textarea placeholder="Message (Optional)"></textarea>
                 </div>
-                <button>Make an Appoinment</button>
+                <button>Make an Appointment</button>
             </form>
         </div>
     </section>
@@ -274,5 +300,6 @@
         </div>
         <p>Designed by<a href="">Myself</a></p>
     </footer>
+    <script src="topBarScrool.js"></script>
 </body>
 </html>

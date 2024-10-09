@@ -15,83 +15,11 @@ body {
 a {
     text-decoration: none;
 }
-
-.branding_bar {
+.top-bar{
+    position: fixed;
     width: 100%;
-    position: sticky;
-    top: 0px;
     z-index: 1000;
-}
-
-.topbar {
-    background-color: rgb(25, 119, 204);
-    width: 100%;
-    height: 40px;
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.topbar_container {
-    display: flex;
-    margin: 0px 80px;
-    padding: 0px 10px;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.contact-info {
-    display: flex;
-    align-items: center;
-}
-
-.contact-info i a {
-    font-style: normal;
-    color: rgb(255, 255, 255);
-    font-family: sans-serif;
-    font-size: 14px;
-}
-
-.contact-info i {
-    color: rgb(255, 255, 255);
-    font-size: 14px;
-    margin-left: 30px;
-}
-
-.contact-info a {
-    padding-left: 4px;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-.contact-info span {
-    padding-left: 4px;
-    color: rgb(255, 255, 255);
-    font-style: normal;
-    font-family: sans-serif;
-    font-size: 14px;
-    font-weight: 200;
-}
-
-.social-links {
-    margin-right: 20px;
-}
-
-.social-links a {
-    padding-left: 14px;
-    font-size: 16px;
-}
-
-.social-links .fa-brands {
-    color: rgba(255, 255, 255, 0.54);
-}
-
-.social-links .fa-brands:hover {
-    color: rgb(255, 255, 255);
-    transition: 0.3s;
+    top: 0;
 }
 
 .branding-content a {
@@ -297,6 +225,10 @@ nav ul {
     position: relative;
     left: 14px;
     cursor: pointer;
+    transition: 0.3s;
+}
+.btn-appointment:hover{
+    background-color: #1979ccc5;
 }
 .hero {
     background-image: url("source/hero-image.jpg");
@@ -309,6 +241,7 @@ nav ul {
     flex-direction: column;
     justify-content: center;
     padding: 60px 0;
+    position: relative;
 }
 
 .hero-container {
@@ -317,7 +250,7 @@ nav ul {
 }
 
 .hero-header {
-    margin: 10px 15px;
+    margin: 60px 15px 20px 15px;
     padding: 20px 0px;
 }
 
@@ -334,6 +267,55 @@ nav ul {
     color: rgb(73, 68, 68);
 }
 
+/* Vertical Social links menu */
+.vertical-menu {
+    top: 50%;
+    background: rgba(25, 119, 204, 0.45);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    width: 230px;
+    height: 40px;
+    overflow: hidden;
+    position: fixed;
+    transform: rotate(-90deg);
+    left: -90px;
+    border-radius: 6px;
+}
+
+.vertical-menu .vertical-menu_container {
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.vertical-menu_container .social-links {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.social-links a {
+    transform: rotate(90deg);
+    padding: 7px 9px;
+    transition: 0.3s;
+}
+
+.social-links a i {
+    color: #ffffff73;
+    transition: 0.3s;
+}
+
+.social-links a:hover{
+    background-color: #2c4964;
+}
+.social-links a:hover i{
+    color: #fff;
+    opacity: 1;
+}
 .hero-rows {
     display: flex;
     justify-content: space-between;
@@ -518,7 +500,7 @@ nav ul {
     margin-top: 10px;
 }
 
-.sec-3 {
+.sec-2a {
     width: 100%;
     background-color: rgb(241, 247, 252);
     padding: 60px 0px;
@@ -671,14 +653,61 @@ nav ul {
     transition: ease-in-out 0.3s;
 }
 
+/* Departments */
+.sec-4{
+    width: 100%;
+    background-color: rgb(241, 247, 252);
+    padding: 60px 0px;
+    color: #000;
+    overflow: hidden;
+}
+.dprt-container{
+    margin: 0 90px;
+}
+.dprt-heading{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.dprt-heading_title h2{
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 0;
+    color: #000000b0;
+    position: relative;
+    cursor: pointer;
+}
+.dprt-heading_title h2::before{
+    content: " ";
+    width: 0;
+    background-color: #ff004085;
+    height: 2px;
+    position: absolute;
+    top: 50px;
+    visibility: hidden;
+    transition: width 0.5s;
+}
+.dprt-heading_title>h2:hover::before{
+    visibility: visible;
+    width: 100%;
+}
+.dprt-heading_para p{
+    font-size: 15px;
+    margin-bottom: 36px;
+    margin-top: 0;
+    color: #000000c5;
+}
+
+
 /* Make an Appointment section */
-.sec-5{
+.sec-7{
     overflow: hidden;
     background-color: rgba(176, 224, 230, 0.671);
     padding: 60px 0;
     color: #000;
 }
-.appoinment_container{
+.appointment_container{
     margin: 0 90px;
 }
 .apnt-heading{
@@ -784,6 +813,7 @@ nav ul {
     margin: 0 39%;
     background-color: #1977cc;
     color: #fff;
+    margin-bottom: 10px;
 }
 .apnt-form button:hover{
     background-color: orange;

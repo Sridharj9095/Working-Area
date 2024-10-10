@@ -577,6 +577,7 @@ nav ul {
     font-weight: 500;
     margin-top: 0;
     color: #000000b0;
+    position: relative;
 }
 .stats-heading_para p{
     font-size: 14px;
@@ -652,6 +653,20 @@ nav ul {
     color: #fff;
     transition: ease-in-out 0.3s;
 }
+.stats-heading_title h2::before{
+    content: " ";
+    width: 0;
+    background-color: #ff004085;
+    height: 2px;
+    position: absolute;
+    top: 50px;
+    visibility: hidden;
+    transition: width 0.5s;
+}
+.stats-heading_title>h2:hover::before{
+    visibility: visible;
+    width: 100%;
+}
 
 /* Departments */
 .sec-4{
@@ -694,10 +709,94 @@ nav ul {
 }
 .dprt-heading_para p{
     font-size: 15px;
-    margin-bottom: 36px;
-    margin-top: 0;
+    margin: 0;
     color: #000000c5;
+    padding-bottom: 60px;
 }
+.dprt-content{
+    display: flex;
+}
+.dprt-content_col1{
+    flex: 1;
+    padding: 0 10px;
+    display: flex;
+    width: 100%;
+    font-family: Roboto;
+    border-right: 2px solid #8fbc8f80;
+}
+.dprt-content_col1 ul{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dprt-content_col1 ul li{
+    list-style: none;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+.dprt-content_col1 ul li:hover a{
+    color: rgba(0, 0, 255, 0.774);
+}
+.dprt-content_col1 ul li .depart-active{
+    color: rgba(0, 0, 255, 0.774);
+}
+.dprt-content_col1 ul li a{
+    color: #000000b4;
+    height: inherit;
+    width: inherit;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    padding-left: 14px;
+    font-size: 15px;
+    transition: 0.5s;
+    font-weight: 600;
+}
+.dprt-content_col2{
+    flex: 3;
+    display: flex;
+}
+.dprt-content_col2__content{
+    padding: 0 10px;
+}
+.col2-row1{
+    display: flex;
+    padding: 0 10px;
+}
+.col2-row1_details{
+    flex: 3;
+    padding: 0 10px;
+}
+.col2-row1_details h3{
+    font-weight: 600;
+    margin-top: 0;
+    font-size: 26px;
+}
+.col2-row1_details .para-simple{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.col2-row1_details .para-italic{
+    font-style: italic;
+}
+.col2-row1_img{
+    flex: 1;
+}
+.col2-row1_img img{
+    width: 250px;
+    padding: 10px;
+}
+
+/* Doctors list */
+
 
 
 /* Make an Appointment section */

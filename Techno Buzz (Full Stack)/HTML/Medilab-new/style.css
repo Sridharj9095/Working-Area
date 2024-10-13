@@ -1,0 +1,410 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+:root {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #fff;
+    color: #444444;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin: 0px;
+}
+h1, h2, h3, h4, h5{
+    font-family: 'Poppins';
+}
+a {
+    color: #444444;
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+
+/* Header */
+/* Top-bar */
+
+.top-bar{
+    background-color: #1977cc;
+    display: flex;
+    font-size: 14px;
+    height: 40px;
+    padding: 0;
+    transition: all 0.5s;
+}
+.top-bar .top-bar_container{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 90px;
+    padding: 0 10px;
+    width: 100%;
+}
+.top-bar_container .contact-info i{
+    color: #ffffffd7;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.top-bar_container .contact-info i .mail-hover:hover{
+    text-decoration: underline;
+    transition: 0.5s;
+}
+.top-bar_container .contact-info i a{
+    color: #fff;
+    font-family: 'roboto';
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 2px;
+}
+.top-bar_container .social-links{
+    display: flex;
+}
+.social-links a{
+    padding: 0 10px;
+}
+.social-links a i{
+    color: #ffffff8f;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.social-links a:hover i{
+    color: #fff;
+}
+@media (max-width: 767px) {
+    .top-bar .top-bar_container{
+        margin: 0 15px;
+    }
+    .top-bar_container .contact-info{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .top-bar_container .contact-info i, 
+    .top-bar_container .contact-info i a {
+        font-size: 12px;
+    }
+    .top-bar_container .social-links{
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .top-bar .top-bar_container{
+        margin: 0 30px;
+        padding: 0;
+    }
+    .top-bar_container .contact-info i, 
+    .top-bar_container .contact-info i a {
+        font-size: 12px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1198.98px){
+    .top-bar .top-bar_container{
+        margin: 0 70px;
+    }
+    .top-bar_container .contact-info i, 
+    .top-bar_container .contact-info i a {
+        font-size: 12px;
+    }
+}
+
+/* Bottom-bar */
+
+header{
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.bottom-bar{
+    background-color: #fff;
+    margin: 0;
+    transition: all 0.5s;
+}
+.bottom-bar_container{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 90px;
+    padding: 10px;
+    height: 70px;
+    position: relative;
+}
+
+.bottom-bar_container .navbar-container .nav-menu{
+    display: flex;
+}
+.bottom-bar_container .logo{
+    margin-left: 6px;
+    margin-right: auto;
+}
+.bottom-bar_container a h1{
+    color: #2c4964;
+    font-size: 30px;
+    margin: 0;
+    position: relative;
+}
+.bottom-bar_container a h1::after{
+    color: orange;
+    content: ".";
+    font-size: 30px;
+    position: absolute;
+}
+
+.navbar-container .nav-menu{
+    align-items: center;
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+}
+.nav-menu .nav-list{
+    padding: 15px 14px;
+    position: relative;
+}
+.nav-menu .nav-list .nav-name{
+    align-items: center;
+    display: flex;
+    font-size: 15px;
+    font-weight: 300;
+    justify-content: space-between;
+    padding: 0 2px;
+    position: relative;
+    transition: all 0.3s;
+}
+.dropdown-menu .nav-name i{
+    color: #4444449c;
+    padding-left: 6px;
+}
+.dropdown-menu .nav-name:hover i{
+    color: #1977cc;
+}
+
+.nav-menu>.nav-list>.nav-name::after{
+    content: "";
+    background-color: #1977cc;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    visibility: hidden;
+    top: 26px;
+    left: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu .nav-list:hover .nav-name,  
+.nav-menu .active-menu{
+    color: #1977cc;
+}
+
+.nav-menu .nav-list .nav-name:hover:after,
+.nav-menu .nav-list:hover>.nav-name:after,
+.nav-menu .active-menu:after{
+    visibility: visible;
+    width: 100%;
+}
+
+.bottom-bar_container .apt-btn{
+    background-color: #1977cc;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 14px;
+    margin: 0 10px 0 30px;
+    padding: 10px 20px;
+}
+.bottom-bar_container .apt-btn:hover{
+    background-color: #2d88d8;
+}
+
+.nav-list .dropdown{
+    align-items: flex-start;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 14px;
+    opacity: 0;
+    padding: 10px 0px;
+    position: absolute;
+    top: 76px;
+    transition: all 0.4s;
+    visibility: hidden;
+    width: 190px;
+}
+.dropdown .dd_nav{
+    padding: 8px 16px;
+    width: 190px;
+}
+.dropdown .dd_nav .ddnav_name{
+    color: rgba(0, 0, 0, 0.843);
+    font-size: 15px;
+    font-weight: 300;
+    transition: all 0.3s;
+}
+.dd_nav:hover .ddnav_name {
+    color: rgb(25, 119, 204);
+    opacity: 1;
+}
+.dropdown .ddnav_name .fa-solid {
+    font-size: 15px;
+    margin-left: 14px;
+    transform: rotate(-90deg);
+    transition: 0.3s ease-in-out;
+}
+.dd_nav2:hover .fa-solid {
+    bottom: -2px;
+    left: -5px;
+    position: relative;
+    transform: rotate(0deg);
+}
+.dropdown .dd_nav2{
+    position: relative;
+}
+
+/* deep drop down */
+.dd_nav2 .deep-drop{
+    align-items: flex-start;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0px;
+    position: absolute;
+    right: 165px;
+    top: 0;
+    transition: all 0.3s;
+    width: 190px;
+}
+.deep-drop .ddd_nav{
+    padding: 8px 16px;
+    width: 190px;
+}
+.deep-drop .ddd_nav .dddnav_name{
+    color: rgba(0, 0, 0, 0.843);
+    font-size: 15px;
+    font-weight: 300;
+    transition: all 0.3s;
+}
+.ddd_nav:hover .dddnav_name {
+    color: rgb(25, 119, 204);
+    opacity: 1;
+}
+.dropdown-menu:hover .dropdown {
+    opacity: 1;
+    transform: translateY(-25px);
+    visibility: visible;
+}
+.dropdown-menu:hover .deep-drop {
+    opacity: 0;
+    visibility: hidden;
+}
+.dd_nav2:hover .deep-drop {
+    opacity: 1;
+    transform: translateX(-25px);
+    visibility: visible;
+}
+
+.mbl-menu a i{
+    font-size: 20px;
+    margin-right: 16px;
+    display: none;
+    color: #444444;
+    position: absolute;
+    top: 22px;
+    right: -20px;
+
+}
+
+@media (max-width: 767px) {
+    header{
+        height: 60px;
+    }
+    .bottom-bar_container{
+        margin: 0 15px;
+        padding: 10px;
+        height: 60px;
+    }
+    .bottom-bar_container .navbar-container{
+        display: none;
+    }
+    .mbl-menu a i{
+        display: block;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    .bottom-bar_container .apt-btn{
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px){
+    .bottom-bar_container{
+        margin: 0 30px;
+        padding: 10px 0;
+        justify-content: space-between;
+    }
+    .bottom-bar_container .logo{
+        margin: 0;
+    }
+    .bottom-bar_container .logo h1{
+        font-size: 26px;
+    }
+    .nav-menu .nav-list .nav-name{
+        font-size: 13px;
+    }
+    .navbar-container{
+        margin-left: 10px;
+    }
+    .nav-menu .nav-list{
+        padding: 18px 3px;
+    }
+    .nav-list:last-child{
+        padding-right: 0;
+    }
+    .bottom-bar_container .apt-btn{
+        font-size: 12px;
+        padding: 10px;
+        margin: 0;
+        margin-left: 10px;
+        text-wrap: nowrap;
+    }
+}
+@media (min-width: 992px) and (max-width: 1198.98px){
+    .bottom-bar_container{
+        margin: 0 60px;
+    }
+    .bottom-bar_container .logo{
+        margin-right: 40px;
+    }
+    .nav-menu .nav-list{
+        padding: 18px 3px;
+    }
+    .nav-menu .nav-list .nav-name{
+        font-size: 13px;
+    }
+    .bottom-bar_container .apt-btn{
+        font-size: 12px;
+        padding: 10px;
+        margin: 0;
+        text-wrap: nowrap;
+    }
+}
+
+/* hero section */
+.hero {
+    background-image: url("source/hero-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0 0 60px 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-container {
+    margin: 0px 80px;
+    padding: 0px 12px;
+}

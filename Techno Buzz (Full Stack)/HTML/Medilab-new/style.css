@@ -5,7 +5,7 @@
     scroll-behavior: smooth;
 }
 body {
-    background-color: #fff;
+    background: radial-gradient(circle, #FF3B3F 30%, #C41E3A 100%);
     color: #444444;
     font-family: 'Roboto';
     font-size: 16px;
@@ -26,7 +26,7 @@ ul li{
 /* Top-bar */
 
 .top-bar{
-    background-color: #1977cc;
+    background-color: transparent;
     display: flex;
     font-size: 14px;
     height: 40px;
@@ -42,16 +42,19 @@ ul li{
     width: 100%;
 }
 .top-bar_container .contact-info i{
-    color: #ffffffd7;
+    color: #ffffffda;
     font-size: 14px;
     padding: 0 10px;
 }
 .top-bar_container .contact-info i .mail-hover:hover{
     text-decoration: underline;
-    transition: 0.5s;
+    color: #fff;
+}
+.top-bar_container .contact-info i .tel-hover:hover{
+    color: #fff;
 }
 .top-bar_container .contact-info i a{
-    color: #fff;
+    color: #ffffffda;
     font-family: 'roboto';
     font-size: 14px;
     font-weight: 400;
@@ -59,6 +62,7 @@ ul li{
 }
 .top-bar_container .social-links{
     display: flex;
+    margin-right: 20px;
 }
 .social-links a{
     padding: 0 10px;
@@ -117,7 +121,7 @@ header{
     z-index: 999;
 }
 .bottom-bar{
-    background-color: #fff;
+    background-color: transparent;
     margin: 0;
     transition: all 0.5s;
 }
@@ -136,10 +140,10 @@ header{
 }
 .bottom-bar_container .logo{
     margin-left: 6px;
-    margin-right: auto;
+    margin-right: 70px;
 }
 .bottom-bar_container a h1{
-    color: #2c4964;
+    color: #fff;
     font-size: 30px;
     margin: 0;
     position: relative;
@@ -151,6 +155,10 @@ header{
     position: absolute;
 }
 
+.navbar-container{
+    margin: 0 20px;
+}
+
 .navbar-container .nav-menu{
     align-items: center;
     font-family: 'Poppins';
@@ -158,67 +166,69 @@ header{
     padding: 0;
 }
 .nav-menu .nav-list{
-    padding: 15px 14px;
+    margin: 0 2px;
+    background: rgba(26, 26, 26, 0.34);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.1px);
+    border-radius: 20px;
+    padding: 6px 14px;
     position: relative;
+    cursor: pointer;
+    transition: all 0.6s ease;
 }
 .nav-menu .nav-list .nav-name{
     align-items: center;
     display: flex;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 300;
     justify-content: space-between;
     padding: 0 2px;
     position: relative;
-    transition: all 0.3s;
+    transition: all 0.6s ease;
+    color: #fff;
+}
+.nav-menu .nav-list:hover{
+    background-color: #fff;
+}
+.nav-menu .nav-list:hover .nav-name{
+    color: #000;
 }
 .dropdown-menu .nav-name i{
-    color: #4444449c;
+    color: #fff;
     padding-left: 6px;
+    transition: all 0.6s;
 }
 .dropdown-menu .nav-name:hover i{
-    color: #1977cc;
-}
-
-.nav-menu>.nav-list>.nav-name::after{
-    content: "";
-    background-color: #1977cc;
-    height: 2px;
-    width: 0;
-    position: absolute;
-    visibility: hidden;
-    top: 26px;
-    left: 0px;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.nav-menu .nav-list:hover .nav-name,  
+    color: #000;
+} 
 .nav-menu .active-menu{
-    color: #1977cc;
+    background-color: #fff;
 }
-
-.nav-menu .nav-list .nav-name:hover:after,
-.nav-menu .nav-list:hover>.nav-name:after,
-.nav-menu .active-menu:after{
-    visibility: visible;
-    width: 100%;
-}
+.nav-menu .active-menu .nav-name{
+    color: #000;
+} 
 
 .bottom-bar_container .apt-btn{
-    background-color: #1977cc;
-    border-radius: 20px;
-    color: #fff;
-    font-size: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #000;
+    font-size: 18px;
     margin: 0 10px 0 30px;
-    padding: 10px 20px;
+    padding: 7px 10px;
+    transition: all 0.6s ease;
 }
 .bottom-bar_container .apt-btn:hover{
-    background-color: #2d88d8;
+    background: rgba(26, 26, 26, 0.34);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.1px);
+    color: #fff;
 }
 
 .nav-list .dropdown{
     align-items: flex-start;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px;
+    background: rgba(26, 26, 26, 0.34);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -226,36 +236,43 @@ header{
     opacity: 0;
     padding: 10px 0px;
     position: absolute;
-    top: 76px;
-    transition: all 0.4s;
+    top: 64px;
+    transition: all 0.6s ease;
     visibility: hidden;
     width: 190px;
+    border-radius: 10px;
+    opacity: 0;
 }
 .dropdown .dd_nav{
     padding: 8px 16px;
     width: 190px;
+    transition: all 0.6s ease;
 }
 .dropdown .dd_nav .ddnav_name{
-    color: rgba(0, 0, 0, 0.843);
+    color: #ffffffe5;
     font-size: 15px;
     font-weight: 300;
-    transition: all 0.3s;
+    transition: all 0.6s ease;
+}
+.dd_nav:hover{
+    background-color: #fff;
 }
 .dd_nav:hover .ddnav_name {
-    color: rgb(25, 119, 204);
-    opacity: 1;
+    color: #000;
 }
 .dropdown .ddnav_name .fa-solid {
     font-size: 15px;
     margin-left: 14px;
     transform: rotate(-90deg);
-    transition: 0.3s ease-in-out;
+    color: #fff;
+    transition: all 0.6s ease;
 }
 .dd_nav2:hover .fa-solid {
     bottom: -2px;
     left: -5px;
     position: relative;
     transform: rotate(0deg);
+    color: #000;
 }
 .dropdown .dd_nav2{
     position: relative;
@@ -264,8 +281,9 @@ header{
 /* deep drop down */
 .dd_nav2 .deep-drop{
     align-items: flex-start;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px;
+    background: rgba(26, 26, 26, 0.34);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -273,43 +291,49 @@ header{
     position: absolute;
     right: 165px;
     top: 0;
-    transition: all 0.3s;
+    transition: all 0.6s ease;
     width: 190px;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
 }
 .deep-drop .ddd_nav{
     padding: 8px 16px;
     width: 190px;
+    transition: all 0.6s ease;
 }
 .deep-drop .ddd_nav .dddnav_name{
-    color: rgba(0, 0, 0, 0.843);
+    color: #ffffffe5;
     font-size: 15px;
     font-weight: 300;
-    transition: all 0.3s;
+    transition: all 0.6s ease;
+}
+.ddd_nav:hover{
+    background-color: #fff;
 }
 .ddd_nav:hover .dddnav_name {
-    color: rgb(25, 119, 204);
-    opacity: 1;
+    color: #000;
 }
 .dropdown-menu:hover .dropdown {
-    opacity: 1;
     transform: translateY(-25px);
     visibility: visible;
+    opacity: 1;
 }
 .dropdown-menu:hover .deep-drop {
-    opacity: 0;
     visibility: hidden;
+    opacity: 0;
 }
 .dd_nav2:hover .deep-drop {
-    opacity: 1;
     transform: translateX(-25px);
     visibility: visible;
+    opacity: 1;
 }
 
 .mbl-menu a i{
     font-size: 20px;
     margin-right: 16px;
     display: none;
-    color: #444444;
+    color: #fff;
     position: absolute;
     top: 22px;
     right: -20px;
@@ -330,12 +354,12 @@ header{
     }
     .mbl-menu a i{
         display: block;
-        margin-left: 10px;
-        font-size: 15px;
+        margin: 0 35px;
+        font-size: 20px;
     }
     .bottom-bar_container .apt-btn{
-        padding: 6px 10px;
-        font-size: 11px;
+        padding: 7px 9px;
+        font-size: 14px;
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px){
@@ -351,23 +375,18 @@ header{
         font-size: 26px;
     }
     .nav-menu .nav-list .nav-name{
-        font-size: 13px;
+        font-size: 12px;
     }
     .navbar-container{
-        margin-left: 10px;
+        margin: 0 10px;
     }
     .nav-menu .nav-list{
-        padding: 18px 3px;
-    }
-    .nav-list:last-child{
-        padding-right: 0;
+        padding: 4px 7px;
     }
     .bottom-bar_container .apt-btn{
-        font-size: 12px;
-        padding: 10px;
+        font-size: 15px;
+        padding: 7px 10px;
         margin: 0;
-        margin-left: 10px;
-        text-wrap: nowrap;
     }
 }
 @media (min-width: 992px) and (max-width: 1198.98px){
@@ -378,22 +397,22 @@ header{
         margin-right: 40px;
     }
     .nav-menu .nav-list{
-        padding: 18px 3px;
+        padding: 8px 12px;
     }
     .nav-menu .nav-list .nav-name{
         font-size: 13px;
     }
     .bottom-bar_container .apt-btn{
-        font-size: 12px;
-        padding: 10px;
+        font-size: 16px;
+        padding: 8px 11px;
         margin: 0;
-        text-wrap: nowrap;
     }
 }
 
 /* hero section */
 .hero {
-    background-image: url("source/hero-image.jpg");
+    /* background-image: url("source/hero-image.jpg"); */
+    background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -401,7 +420,7 @@ header{
     padding: 0 0 60px 0;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh-110px);
 }
 
 .hero-container {

@@ -35,11 +35,11 @@
                     </a>
                     <nav class="navbar-container">
                         <ul class="nav-menu">
-                            <li class="nav-list active-menu"><a href="" class="nav-name">Home</a></li>
-                            <li class="nav-list"><a href="" class="nav-name">Feed</a></li>
-                            <li class="nav-list"><a href="" class="nav-name">Library</a></li>
+                            <li class="nav-list active-menu"><a href="#home" class="nav-name">Home</a></li>
+                            <li class="nav-list"><a href="#feed" class="nav-name">Feed</a></li>
+                            <li class="nav-list"><a href="#library" class="nav-name">Library</a></li>
                             <li class="nav-list"><a href="" class="nav-name">Departments</a></li>
-                            <li class="nav-list"><a href="" class="nav-name">About</a></li>
+                            <li class="nav-list"><a href="#about" class="nav-name">About</a></li>
                             <li class="nav-list dropdown-menu">
                                 <a href="" class="nav-name">Dropdown<i class="fa-solid fa-angle-down"></i></a>
                                 <ul class="dropdown">
@@ -67,7 +67,7 @@
                 </div>
             </div>
     </header>
-    <main class="hero">
+    <main class="hero" id="home">
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">The Future of Music. Here Today</h1>
@@ -76,7 +76,7 @@
             </div>
         </div>
     </main>
-    <section class="library">
+    <section class="library" id="library">
         <div class="library-heading">
             <h1 class="library-heading_title">Library</h1>
             <p class="library-heading_para">Trending Music on Poplab</p>
@@ -104,5 +104,35 @@
             </div>
         </div>
     </section>
+    <section class="feed" id="feed">
+        <div class="feed-heading">
+            <h1 class="feed-heading_title">Music creation for all</h1>
+            <p class="feed-heading_para">Record, mix and collaborate on your music projects from start to finish with our best-in-class and 100% free Studio.</p>
+        </div>
+        <div class="feed-container">
+            <div class="feed-box">
+                <i class="fa-solid fa-angles-right"></i>
+                <h2>Fast</h2>
+                <p>Always ready when inspiration strikes with our fully functional DAW in your pocket or via the browser.</p>
+            </div>
+            <div class="feed-box">
+                <i class="fa-solid fa-music"></i>
+                <h2>Unlimited</h2>
+                <p>No boundaries to your creativity with unlimited multi-track projects and free cloud storage.</p>
+            </div>
+            <div class="feed-box">
+                <i class="fa-solid fa-earth-asia"></i>
+                <h2>Social</h2>
+                <p>Our game-changing technology will transform your workflow with up to 50 collaborators per project.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="copyright" id="about">
+        <div class="copyright-header">
+            <i class="fa-regular fa-copyright"></i>
+            <h4>Copyright <span>Poplab</span> All Rights Reserved</h4>
+        </div>
+        <p>Designed by<a href="">Myself</a></p>
+    </footer>
 </body>
 </html>

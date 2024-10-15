@@ -542,6 +542,7 @@ header{
     flex-direction: column;
     margin: 0 90px;
     padding: 0 20px;
+    margin-bottom: 20px;
 }
 .library-heading_title{
     margin-top: 0;
@@ -625,6 +626,7 @@ header{
     flex-direction: column;
     margin: 0 90px;
     padding: 0 20px;
+    margin-bottom: 20px;
 }
 .feed-heading_title{
     margin-top: 0;

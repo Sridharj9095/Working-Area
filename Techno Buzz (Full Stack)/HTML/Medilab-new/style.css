@@ -226,9 +226,7 @@ header{
 
 .nav-list .dropdown{
     align-items: flex-start;
-    background: rgba(26, 26, 26, 0.34);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(12px);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -249,22 +247,23 @@ header{
     transition: all 0.6s ease;
 }
 .dropdown .dd_nav .ddnav_name{
-    color: #ffffffe5;
+    /* color: #ffffffe5; */
+    color: #000;
     font-size: 15px;
     font-weight: 300;
     transition: all 0.6s ease;
 }
 .dd_nav:hover{
-    background-color: #fff;
+    background-color: #444444;
 }
 .dd_nav:hover .ddnav_name {
-    color: #000;
+    color: #ffffffe5;
 }
 .dropdown .ddnav_name .fa-solid {
     font-size: 15px;
     margin-left: 14px;
     transform: rotate(-90deg);
-    color: #fff;
+    color: #000;
     transition: all 0.6s ease;
 }
 .dd_nav2:hover .fa-solid {
@@ -272,7 +271,7 @@ header{
     left: -5px;
     position: relative;
     transform: rotate(0deg);
-    color: #000;
+    color: #ffffffe5;
 }
 .dropdown .dd_nav2{
     position: relative;
@@ -281,9 +280,7 @@ header{
 /* deep drop down */
 .dd_nav2 .deep-drop{
     align-items: flex-start;
-    background: rgba(26, 26, 26, 0.34);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(12px);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -303,16 +300,16 @@ header{
     transition: all 0.6s ease;
 }
 .deep-drop .ddd_nav .dddnav_name{
-    color: #ffffffe5;
+    color: #000;
     font-size: 15px;
     font-weight: 300;
     transition: all 0.6s ease;
 }
 .ddd_nav:hover{
-    background-color: #fff;
+    background-color: #444444;
 }
 .ddd_nav:hover .dddnav_name {
-    color: #000;
+    color: #ffffffe5;
 }
 .dropdown-menu:hover .dropdown {
     transform: translateY(-25px);
@@ -410,20 +407,203 @@ header{
 }
 
 /* hero section */
-.hero {
-    /* background-image: url("source/hero-image.jpg"); */
-    background-color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.hero {   
+    background-color: #f0f3f5;
+    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+    height: 100vh;
     overflow: hidden;
     padding: 0 0 60px 0;
     position: relative;
     width: 100%;
-    height: calc(100vh-110px);
 }
 
 .hero-container {
-    margin: 0px 80px;
+    background-image: url("source/hero-img.webp");
+    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
     padding: 0px 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
+.hero-content{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 40px;
+}
+.hero-title{
+    font-size: 60px;
+    margin: 0;
+    line-height: 1.15;
+    font-weight: 600;
+}
+.hero-para{
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+.get-started{
+    color: #444444;
+    background-color: #fff;
+    padding: 15px 20px;
+    border: 0;
+    border-radius: 25px;
+    font-weight: 500;
+    width: fit-content;
+    margin: 20px 10px;
+    transition: all 0.5s ease;
+}
+.get-started:hover{
+    background-color: #FF3B3F;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .hero-content{
+        width: 100%;
+        margin-left: 15px;
+        height: 50vh;
+        justify-content: flex-start;
+    }
+    .hero-content .hero-title{
+        font-size: 28px;
+        width: 75%;
+    }
+    .hero-content .hero-para{
+        font-size: 14px;
+        margin-top: 12px;
+        line-height: 1.5;
+        letter-spacing: normal;
+    }
+    .get-started{
+        font-size: 11px;
+        padding: 5px 10px;
+        margin: 10px auto;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px){
+    .hero-content{
+        width: 70%;
+        margin-left: 30px;
+    }
+    .hero-content .hero-title{
+        font-size: 36px;
+        width: 75%;
+    }
+    .hero-content .hero-para{
+        font-size: 15px;
+        margin-top: 14px;
+        line-height: 1.5;
+        letter-spacing: normal;
+    }
+    .get-started{
+        font-size: 13px;
+        padding: 7px 11px;
+        margin: 20px 10px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1198.98px){
+    .hero-content{
+        width: 60%;
+        margin-left: 40px;
+    }
+    .hero-content .hero-title{
+        font-size: 50px;
+        width: 75%;
+    }
+    .hero-content .hero-para{
+        font-size: 15px;
+        margin-top: 14px;
+        line-height: 1.5;
+        letter-spacing: normal;
+    }
+    .get-started{
+        font-size: 15px;
+        padding: 10px 20px;
+        margin: 20px 10px;
+    }
+}
+
+/* Library */
+.library{
+    padding: 60px 0;
+    color: #fff;
+}
+.library-heading{
+    margin: 0 90px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.library-heading_title{
+    margin-top: 0;
+    font-size: 30px;
+}
+.library-heading_para{
+    margin-top: 0;
+}
+
+.library-container{
+    margin: 0 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.lib-box{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(26, 26, 26, 0.34);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.1px);
+    border-radius: 10px;
+    transition: all 0.6s ease;
+    width: 22%;
+    min-width: 200px;
+}
+.lib-box .lib-img_container{
+    margin: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.lib-img_container img{
+    transition: transform 0.5s ease;
+    max-width: 100%;
+    height: auto;
+}
+.lib-img_container:hover img{
+    transform: scale(1.2);
+}
+.lib-box h4{
+    margin: 5px 0;
+}
+.lib-box p{
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+@media (max-width: 767px){
+    .library-heading_title{
+        margin-bottom: 10px;
+    }
+    .library-container{
+        margin: 0 15px;
+    }
+    .lib-box {
+        width: 45%;
+    }
+}
+
+/* Feed section */

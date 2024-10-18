@@ -210,12 +210,17 @@ header{
 
 .bottom-bar_container .apt-btn{
     background-color: #fff;
-    border-radius: 50%;
+    border-radius: 20px;
     color: #000;
-    font-size: 18px;
     margin: 0 10px 0 30px;
-    padding: 7px 10px;
+    padding: 9px 22px;
     transition: all 0.6s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.apt-btn i{
+    font-size: 14px;
 }
 .bottom-bar_container .apt-btn:hover{
     background: rgba(26, 26, 26, 0.34);
@@ -355,7 +360,7 @@ header{
         font-size: 20px;
     }
     .bottom-bar_container .apt-btn{
-        padding: 7px 9px;
+        padding: 7px 14px;
         font-size: 14px;
     }
 }
@@ -401,7 +406,7 @@ header{
     }
     .bottom-bar_container .apt-btn{
         font-size: 16px;
-        padding: 8px 11px;
+        padding: 8px 16px;
         margin: 0;
     }
 }
@@ -466,6 +471,9 @@ header{
 }
 
 @media (max-width: 767px) {
+    .hero{
+        height: 70vh;
+    }
     .hero-content{
         width: 100%;
         margin-left: 15px;
@@ -478,17 +486,18 @@ header{
     }
     .hero-content .hero-para{
         font-size: 14px;
-        margin-top: 12px;
-        line-height: 1.5;
         letter-spacing: normal;
     }
     .get-started{
-        font-size: 11px;
-        padding: 5px 10px;
+        font-size: 13px;
+        padding: 8px 16px;
         margin: 10px auto;
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px){
+    .hero{
+        height: 80vh;
+    }
     .hero-content{
         width: 70%;
         margin-left: 30px;
@@ -504,12 +513,15 @@ header{
         letter-spacing: normal;
     }
     .get-started{
-        font-size: 13px;
-        padding: 7px 11px;
+        font-size: 14px;
+        padding: 9px 15px;
         margin: 20px 10px;
     }
 }
 @media (min-width: 992px) and (max-width: 1198.98px){
+    .hero{
+        height: 90vh;
+    }
     .hero-content{
         width: 60%;
         margin-left: 40px;

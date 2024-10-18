@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+  }
+  
+  .wave-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0 0px #ffb2b2;
+    animation: wave-effect 4s linear infinite;
+  }
+
+  /* Wave-like glow effect */
+  @keyframes wave-effect {
+    0% {
+      box-shadow: 0 0 0 0px #ffb2b2, 0 0 0 0px #ffb2b2;
+    }
+    40% {
+      box-shadow: 0 0 0 30px rgba(255, 178, 178, 0), 0 0 0 0px #ffb2b2;
+    }
+    80% {
+      box-shadow: 0 0 0 30px rgba(255, 178, 178, 0), 0 0 0 20px rgba(255, 178, 178, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0px rgba(255, 178, 178, 0), 0 0 0 20px rgba(255, 178, 178, 0);
+    }
+  }
+  

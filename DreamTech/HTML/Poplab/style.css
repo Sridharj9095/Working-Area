@@ -471,9 +471,6 @@ header{
 }
 
 @media (max-width: 767px) {
-    .hero{
-        height: 70vh;
-    }
     .hero-content{
         width: 100%;
         margin-left: 15px;
@@ -495,9 +492,6 @@ header{
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px){
-    .hero{
-        height: 80vh;
-    }
     .hero-content{
         width: 70%;
         margin-left: 30px;
@@ -519,9 +513,6 @@ header{
     }
 }
 @media (min-width: 992px) and (max-width: 1198.98px){
-    .hero{
-        height: 90vh;
-    }
     .hero-content{
         width: 60%;
         margin-left: 40px;

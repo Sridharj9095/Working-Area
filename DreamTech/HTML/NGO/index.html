@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/normalize.css">
     <title>NGO Web Design</title>
@@ -35,8 +36,8 @@
     <!-- Hero or Home Secton -->
     <main class="hero" id="home">
         <div class="hero-container">
-            <h1>Inclusive care for children with special needs</h1>
-            <div class="hero-btn_row">
+            <h1 data-aos="fade-right">Inclusive care for children with special needs</h1>
+            <div class="hero-btn_row" data-aos="fade-up-right">
                 <div class="hero-btn hero-btn_1"><a href="">What We Do</a></div>
                 <div class="hero-btn hero-btn_2"><a href=""><i class="fa-solid fa-circle-play"></i>Play Video</a></div>
             </div>
@@ -46,19 +47,19 @@
     <section class="sec-1" id="about">
         <div class="about-container">
             <div class="top-row">
-                <div class="top-row_content">
+                <div class="top-row_content" data-aos="fade-right">
                     <h4 class="sec-title">Know About us</h4>
                     <h2 class="sec-subtitle">We provide a place for children with special needs</h2>
                     <p class="sec-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
                     <p class="sec-para">Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
                     <div class="sec-btn_main"><a href="" class="sec-btn">Learn more</a></div>
                 </div>
-                <div class="top-row_video">
+                <div class="top-row_video" data-aos="zoom-in">
                     <img src="source/about-img.jpg" class="top-row_img" alt="">
                     <a class="wave-play"><i class="fa-solid fa-play"></i></a>
                 </div>
             </div>
-            <div class="bottom-row">
+            <div class="bottom-row" data-aos="zoom-in-up">
                 <h4 class="title-row">Our Supporters</h4>
                 <div class="logo-row">
                     <a class="row-logos" href="">
@@ -84,7 +85,7 @@
     <!-- What We Do Section -->
     <section class="sec-2" id="whatwedo">
         <div class="wwd-container">
-            <div class="wwd-col1_content">
+            <div class="wwd-col1_content" data-aos="fade-up-right">
                 <h4 class="wwd-title">What we do</h4>
                 <h2 class="wwd-subtitle">Some services we provide for our children</h2>
                 <p class="wwd-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
@@ -109,7 +110,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="wwd-col2_image">
+            <div class="wwd-col2_image" data-aos="zoom-in">
                 <img src="source/whatwedo-img.jpg" alt="">
             </div>
         </div>
@@ -117,12 +118,12 @@
     <!-- Media Section -->
     <section class="sec-3" id="media">
         <div class="media-container">
-            <div class="media-toprow">
+            <div class="media-toprow" data-aos="fade-up">
                 <h4 class="media-title">Projects we have done</h4>
                 <h2 class="media-subtitle">We are creating a place where children with special needs can thrive</h2>
             </div>
             <div class="media-bottomrow">
-                <div class="img-box img-box1">
+                <div class="img-box img-box1" data-aos="fade-up-right">
                     <div class="img-content">
                         <div class="img-content-title">
                             <h3>Mission smile 1k: Outdoor charity</h3>
@@ -131,7 +132,7 @@
                         <div class="media-btn"><a href="">Learn more</a></div>
                     </div>
                 </div>
-                <div class="img-box img-box2">
+                <div class="img-box img-box2" data-aos="fade-up">
                     <div class="img-content">
                         <div class="img-content-title">
                             <h3>Weekly excursions</h3>
@@ -140,7 +141,7 @@
                         <div class="media-btn"><a href="">Learn more</a></div>
                     </div>
                 </div>
-                <div class="img-box img-box3">
+                <div class="img-box img-box3" data-aos="fade-up-left">
                     <div class="img-content">
                         <div class="img-content-title">
                             <h3>Monthly public awareness</h3>
@@ -155,12 +156,12 @@
     <!-- Footer or Contact Section -->
     <footer class="contact" id="contact">
         <div class="contact-container">
-            <div class="left-contact">
+            <div class="left-contact" data-aos="fade-right">
                 <a href="index.html">
                     <h1>ren</h1>
                 </a>
             </div>
-            <div class="center-contact">
+            <div class="center-contact" data-aos="zoom-in">
                 <div class="center-contact_container">
                     <div class="contact-col">
                         <h4>Home</h4>
@@ -191,7 +192,7 @@
                     </div>
                 </div>
             </div>
-            <div class="right-contact">
+            <div class="right-contact" data-aos="fade-left">
                 <h2>Subscribe to get latest updates</h2>
                 <div class="input-area">
                     <input type="email" placeholder="Your Email">
@@ -200,5 +201,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

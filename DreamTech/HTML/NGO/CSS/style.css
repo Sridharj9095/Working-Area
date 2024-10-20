@@ -216,17 +216,17 @@ header{
 
 @media (max-width: 767px){
     .hero{
-        height: 70vh;
+        height: 80vh;
     }
     .hero-container{
         padding: 4rem;
     }
     .hero-container h1{
         font-size: 4rem;
-        width: 80%;
+        width: 90%;
     }
     .hero-btn_row{
-        width: 80%;
+        width: 90%;
     }
     .hero-btn{
         margin-top: 3rem;

@@ -19,10 +19,6 @@ html{
     font-size: 62.5%;
 }
 
-html, body {
-    overflow-x: hidden;
-}
-
 body{
     background-color: var(--background-color);
     color: var(--default-color);
@@ -243,6 +239,7 @@ header{
 /* About Us section */
 
 .sec-1{
+    overflow: hidden;
     padding: 6rem 0;
 }
 .about-container{
@@ -460,6 +457,7 @@ header{
 
 .sec-2{
     background-color: #FCEDC6;
+    overflow: hidden;
     padding: 6rem 0;
 }
 .wwd-container{
@@ -589,6 +587,7 @@ header{
 /* Media Section */
 
 .sec-3{
+    overflow: hidden;
     padding: 6rem 0;
 }
 .media-container{
@@ -723,6 +722,7 @@ header{
 
 .contact{
     background-color: var(--dark-background);
+    overflow: hidden;
 }
 .contact-container{
     color: var(--background-color);

@@ -3,22 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="style.css">
     <title>Bakers Mart</title>
 </head>
 <body>
-    <section class="item-scroll">
-        <div class="owl-carousel owl-theme">
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-          </div>
+    <header class="topbar">
+        <div class="topbar-container">
+            <div class="left-topbar">
+                <a href="" class="logo">
+                    <h1><span>B</span>akers<span>m</span>art</h1>
+                </a>
+            </div>
+            <div class="center-topbar">
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-items"><a href="" class="nav-name">Category</a></li>
+                        <li class="nav-items"><a href="" class="nav-name">About</a></li>
+                        <li class="nav-items"><a href="" class="nav-name">Cookbook</a></li>
+                        <li class="nav-items"><a href="" class="nav-name">Recipes</a></li>
+                        <li class="nav-items"><a href="" class="nav-name">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-topbar">
+                <a href="" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i>Search</a>
+            </div>
+        </div>
+    </header>
+    <section class="category" id="category">
+        <div class="catg-container">
+            <div class="catg-topbar">
+                <h2>Recipes by Category</h2>
+            </div>
+            <div class="catg-bottombar">
+                <div class="items item1">
+                    <div class="item-container">
+                        <h2>Healthy</h2>
+                        <p>Cakes</p>
+                    </div>
+                </div>
+                <div class="items item2">
+                    <div class="item-container">
+                        <h2>Healthy</h2>
+                        <p>Desserts</p>                    
+                    </div>
+                </div>
+                <div class="items item3">
+                    <div class="item-container">
+                        <h2>Healthy</h2>
+                        <p>Brownies</p>                    
+                    </div>
+                </div>
+                <div class="items item4">
+                    <div class="item-container">
+                        <h2>Healthy</h2>
+                        <p>Muffins</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-<script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <!-- <section class="item-scroll">
+        <div class="owl-carousel owl-theme">
+            <div class="box box1"> Box 1 </div>
+            <div class="box box2"> Box 2 </div>
+            <div class="box box3"> Box 3 </div>
+            <div class="box box4"> Box 4 </div>
+            <div class="box box5"> Box 5 </div>
+            <div class="box box6"> Box 6 </div>
+            <div class="box box7"> Box 7 </div>
+          </div>
+    </section> -->
+    <!-- <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items:5,
+            loop:true,
+            margin:10,
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:true
+        });
+    </script> -->
 </body>
 </html>

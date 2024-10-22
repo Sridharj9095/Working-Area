@@ -84,7 +84,6 @@
     <script>
         var owl = $('.owl-carousel');
         owl.owlCarousel({
-            items:4,
             loop:true,
             margin:10,
             autoplay:true,
@@ -94,16 +93,16 @@
             responsive:{
                 0:{
                     items:1,
-                    nav:true
+                    nav:false,
+                    dots:false
                 },
                 600:{
-                    items:3,
-                    nav:false
+                    items:2,
+                    nav:true
                 },
                 1000:{
-                    items:5,
-                    nav:true,
-                    loop:false
+                    items:4,
+                    nav:true
                 }
             }
         });

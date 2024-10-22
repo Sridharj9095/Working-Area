@@ -215,4 +215,7 @@ ul li{
     .catg-topbar h2{
         font-size: 2rem;
     }
+    .catg-bottombar{
+        margin-left: 4rem;
+    }
 }

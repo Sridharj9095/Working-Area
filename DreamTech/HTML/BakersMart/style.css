@@ -94,6 +94,7 @@ ul li{
     align-items: center;
     display: flex;
     justify-content: center;
+    margin-left: 3rem;
 }
 .items{
     background-position: center;
@@ -101,6 +102,7 @@ ul li{
     background-size: cover;
     border-radius: 2px;
     color: var(--background-color);
+    cursor: pointer;
     height: 220px;
     margin: 1rem;
     overflow: hidden;
@@ -144,6 +146,12 @@ ul li{
 .item4::before {
     background-image: url(source/cimg4.jpg);
 }
+.item5::before {
+    background-image: url(source/cimg5.jpg);
+}
+.item6::before {
+    background-image: url(source/cimg6.jpg);
+}
 
 .items:hover::before {
     transform: scale(1.2);
@@ -176,41 +184,3 @@ ul li{
     position: relative;
     text-transform: uppercase;
 }
-
-/* Section */
-/* .item-scroll{
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    padding: 0 9rem;
-}
-.box{
-    width: 200px;
-    height: 300px;
-    border: 0;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.box1{
-    background-color: aquamarine;
-}
-.box2{
-    background-color: rgb(12, 110, 202);
-}
-.box3{
-    background-color: rgb(226, 223, 17);
-}
-.box4{
-    background-color: rgb(15, 206, 63);
-}
-.box5{
-    background-color: rgb(181, 209, 22);
-}
-.box6{
-    background-color: rgb(219, 15, 219);
-}
-.box7{
-    background-color: rgb(224, 11, 40);
-} */

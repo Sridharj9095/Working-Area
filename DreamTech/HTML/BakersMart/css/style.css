@@ -176,6 +176,18 @@ ul li{
 .item6::before {
     background-image: url(../source/cimg6.jpg);
 }
+.item7::before {
+    background-image: url(../source/cimg7.jpg);
+}
+.item8::before {
+    background-image: url(../source/cimg8.jpg);
+}
+.item9::before {
+    background-image: url(../source/cimg9.jpg);
+}
+.item10::before {
+    background-image: url(../source/cimg10.jpg);
+}
 
 .items:hover::before {
     transform: scale(1.2);

@@ -41,6 +41,9 @@ ul li{
 .topbar{
     background-color: transparent;
     height: 7rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 .topbar-container{
     align-items: center;
@@ -121,4 +124,70 @@ ul li{
     margin-left: 1rem;
     padding: 1rem 2.8rem;
     text-transform: uppercase;
+}
+
+
+/* Banner or Hero Section */
+
+.hero{
+    align-items: center;
+    background-color: var(--background-color);
+    display: flex;
+    height: 570px;
+    justify-content: center;
+}
+.hero-container{
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 90%;
+}
+.logo-content{
+    margin-left: 12rem;
+}
+.logo-round{
+    align-items: center;
+    background-color: var(--accent-color);
+    border-radius: 52% 48% 50% 50% / 34% 32% 68% 66%;
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    justify-content: start;
+    left: 15px;
+    position: relative;
+    top: 10px;
+    width: 260px;
+}
+.logo-round img{
+    bottom: 24px;
+    left: 18px;
+    position: relative;
+    width: 100px;
+}
+.logo-round h1{
+    bottom: 16px;
+    color: var(--default-color);
+    font-size: 2rem;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 75%;
+}
+.logo-round .txt-big{
+    font-size: 4rem;
+}
+.logo-round .txt-small{
+    font-size: 1.2rem;
+}
+.hero-img{
+    height: 500px;
+}
+.hero-img img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }

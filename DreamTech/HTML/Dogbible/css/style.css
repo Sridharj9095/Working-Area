@@ -1,0 +1,97 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --accent-color: rgb(242 114 75);
+    --background-color: rgb(237 235 236);
+    --dark-background: rgb(49 49 61);
+    --default-color: #fff;
+}
+:root{
+    --heading-color: #000;
+    --para-color: rgb(154 154 154);
+}
+:root{
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: var(--default-color);
+    color: var(--heading-color);
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 1.4rem; 
+    margin: 0;
+}
+a {
+    color: var(--heading-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+ul li{
+    list-style: none;
+}
+
+
+/* Header */
+
+.topbar{
+    /* background-color: aquamarine; */
+    height: 7rem;
+}
+.topbar-container{
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0 9rem;
+}
+.left-topbar{}
+.left-topbar .logo{}
+.logo .logo-icon{}
+.logo h1{
+    font-weight: 500;
+    margin: 0;
+}
+.logo h1::after{
+    color: var(--accent-color);
+    content: "bible";
+}
+.right-topbar{
+    align-items: center;
+    display: flex;
+}
+.right-col1{}
+.right-col1 .nav-items{
+    align-items: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-items .nav-list{
+    margin: 0 0.5rem;
+    padding: 2rem 1rem;
+}
+.nav-list .nav-name{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.right-col2{
+    align-items: center;
+    display: flex;
+}
+.right-col2 i{
+    font-size: 1.8rem;
+    margin-left: 1rem;
+}
+.right-col2 .signin-btn{
+    background-color: var(--accent-color);
+    border-radius: 0.5rem;
+    color: var(--default-color);
+    margin-left: 1.6rem;
+    padding: 1rem 2.8rem;
+    text-transform: uppercase;
+}

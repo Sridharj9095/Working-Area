@@ -39,7 +39,7 @@ ul li{
 /* Header */
 
 .topbar{
-    /* background-color: aquamarine; */
+    background-color: transparent;
     height: 7rem;
 }
 .topbar-container{
@@ -49,7 +49,6 @@ ul li{
     justify-content: space-between;
     margin: 0 9rem;
 }
-.left-topbar{}
 .left-topbar .logo{
     display: flex;
     align-items: center;
@@ -81,7 +80,6 @@ ul li{
     align-items: center;
     display: flex;
 }
-.right-col1{}
 .right-col1 .nav-items{
     align-items: center;
     display: flex;

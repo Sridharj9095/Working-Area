@@ -208,44 +208,44 @@ ul li{
 
 .sec-1{
     background-color: var(--dark-background);
-    position: relative;
     height: 260px;
+    position: relative;
 }
 .sec1-container{
-    margin: 0 9rem;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 100%;
     justify-content: center;
+    margin: 0 9rem;
 }
 .sec1-toprow{
     background-color: var(--default-color);
-    width: 65%;
     border-radius: 5px;
+    box-shadow: 0 0 10px 1px #4444442e;
     position: absolute;
     top: -30px;
-    box-shadow: 0 0 10px 1px #4444442e;
+    width: 65%;
 }
 .search-form{
-    display: flex;
     align-items: center;
+    display: flex;
 }
 .search-form .form-group{
-    flex: 1;
-    flex-direction: column;
-    display: flex;
-    padding: 1rem 2rem;
     border-left: 1px solid #0000002e;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem 2rem;
 }
 .form-group:first-child{
     border: 0;
 }
 .form-group label{
-    font-size: 1.2rem;
     color: #0000008a;
-    text-transform: capitalize;
+    font-size: 1.2rem;
     margin: 0.5rem 0 0.5rem 0.2rem;
+    text-transform: capitalize;
 }
 .form-group input{
     border: 0;
@@ -260,8 +260,8 @@ ul li{
 }
 .form-group select{
     border: 0;
-    outline: 0;
     font-family: Inter, Arial, Helvetica, sans-serif;
+    outline: 0;
 }
 .search-form a{
     background-color: var(--accent-color);
@@ -279,32 +279,32 @@ ul li{
 
 
 .sec1-bottomrow{
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
+    margin-top: 3.3rem;
     width: 80%;
-    margin-top: 4rem;
 }
 .sec1-bottomrow .rowbox{
-    height: 150px;
-    flex: 1;
-    margin: 1.6rem;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
     border-radius: 1rem;
     border: 1px solid rgba(154, 154, 154, 0.4);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 150px;
+    justify-content: center;
+    margin: 1.6rem;
 }
 .rowbox .box-logo{
     object-fit: cover;
-    width: 40px;
     transition: 0.3s;
+    width: 40px;
 }
 .rowbox h2{
     color: var(--para-color);
-    text-transform: uppercase;
     font-size: 1.6rem;
+    text-transform: uppercase;
     transition: 0.3s;
 }
 .rowbox:hover{
@@ -315,4 +315,84 @@ ul li{
 }
 .rowbox:hover .box-logo {
     filter: brightness(0) invert(1);
+}
+
+
+/* Section 2 for Popular dog Breeds */
+
+.sec-2{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 9rem;
+    padding: 3rem 0;
+}
+.breeds-row1 h1{
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.breeds-row1 h1 span{
+    font-weight: 500;
+}
+
+.breeds-row2{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.breedicon-toprow{
+    display: flex;
+    justify-content: center;
+    width: 85%;
+}
+.breedicon-box:hover{
+    box-shadow: 0 0 15px 0 #0000002e;
+    transform: scale(1.1);
+}
+.breedicon-box{
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 150px;
+    justify-content: center;
+    margin: 0 1rem;
+}
+.breedicon-box .icon-box{
+    height: 60px;
+    margin-top: 2rem;
+    width: 60px;
+}
+.breedicon-box .bicon-title{
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+.breedicon-bottomrow{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 85%;
+}
+
+.breeds-row3{
+    margin-top: 6rem;
+}
+.breeds-row3 .viewall{
+    border-radius: 6px;
+    border: 2px solid var(--accent-color);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+}
+.breeds-row3 .viewall:hover{
+    background-color: var(--accent-color);
+    color: var(--default-color);
 }

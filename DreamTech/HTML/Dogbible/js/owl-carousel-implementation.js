@@ -1,25 +1,22 @@
 var owl = $(".owl-carousel");
 owl.owlCarousel({
-  autoplay: true,
-  autoplayHoverPause: true,
-  autoplayTimeout: 3000,
-  loop: true,
   margin: 10,
-  navText: ["<", ">"],
-  responsiveClass: true,
+  navText: ["<--", "-->"],
+  nav: true,
+  dots: true,
+  slideBy: "page",
   responsive: {
     0: {
       items: 1,
-      nav: true,
-      dots: false,
+      rows: 2, //custom option not used by Owl Carousel, but used by the algorithm below
     },
-    600: {
-      items: 3,
-      nav: true,
+    768: {
+      items: 2,
+      rows: 3, //custom option not used by Owl Carousel, but used by the algorithm below
     },
-    1000: {
-      items: 4,
-      nav: true,
+    991: {
+      items: 5,
+      rows: 2, //custom option not used by Owl Carousel, but used by the algorithm below
     },
   },
 });

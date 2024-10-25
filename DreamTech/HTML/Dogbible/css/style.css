@@ -100,6 +100,9 @@ ul li{
     font-weight: 500;
     text-transform: uppercase;
 }
+.nav-list:hover .nav-name{
+    color: var(--accent-color);
+}
 .vertical-line::after{
     background-color: #00000030;
     content: "";
@@ -113,9 +116,13 @@ ul li{
     align-items: center;
     display: flex;
 }
-.right-col2 i{
+.right-col2 a i{
     font-size: 1.8rem;
     margin: 0 1rem;
+    transition: 0.2s;
+}
+.right-col2 a i:hover{
+    color: var(--accent-color);
 }
 .right-col2 .signin-btn{
     background-color: var(--accent-color);
@@ -124,6 +131,9 @@ ul li{
     margin-left: 1rem;
     padding: 1rem 2.8rem;
     text-transform: uppercase;
+}
+.signin-btn:hover{
+    background-color: rgb(212, 109, 77);
 }
 
 
@@ -150,6 +160,7 @@ ul li{
     align-items: center;
     background-color: var(--accent-color);
     border-radius: 52% 48% 50% 50% / 34% 32% 68% 66%;
+    cursor: default;
     display: flex;
     flex-direction: column;
     height: 260px;

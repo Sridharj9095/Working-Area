@@ -10,7 +10,7 @@
 }
 :root{
     --heading-color: #000;
-    --para-color: rgb(154 154 154);
+    --para-color: rgba(154, 154, 154, 0.644);
 }
 :root{
     scroll-behavior: smooth;
@@ -201,4 +201,118 @@ ul li{
     height: 100%;
     object-fit: cover;
     width: 100%;
+}
+
+
+/* Section 1 for Business */
+
+.sec-1{
+    background-color: var(--dark-background);
+    position: relative;
+    height: 260px;
+}
+.sec1-container{
+    margin: 0 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+.sec1-toprow{
+    background-color: var(--default-color);
+    width: 65%;
+    border-radius: 5px;
+    position: absolute;
+    top: -30px;
+    box-shadow: 0 0 10px 1px #4444442e;
+}
+.search-form{
+    display: flex;
+    align-items: center;
+}
+.search-form .form-group{
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    padding: 1rem 2rem;
+    border-left: 1px solid #0000002e;
+}
+.form-group:first-child{
+    border: 0;
+}
+.form-group label{
+    font-size: 1.2rem;
+    color: #0000008a;
+    text-transform: capitalize;
+    margin: 0.5rem 0 0.5rem 0.2rem;
+}
+.form-group input{
+    border: 0;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    outline: 0;
+}
+.form-group input::placeholder{
+    color: var(--heading-color);
+}
+.form-group input:focus::placeholder{
+    color: var(--para-color);
+}
+.form-group select{
+    border: 0;
+    outline: 0;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+.search-form a{
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    margin-right: 3px;
+    padding: 2rem;
+}
+.search-form a i{
+    color: var(--default-color);
+    font-size: 1.6rem;
+}
+.search-form a:hover{
+    background-color: rgb(212, 109, 77);
+}
+
+
+.sec1-bottomrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-top: 4rem;
+}
+.sec1-bottomrow .rowbox{
+    height: 150px;
+    flex: 1;
+    margin: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    border: 1px solid rgba(154, 154, 154, 0.4);
+}
+.rowbox .box-logo{
+    object-fit: cover;
+    width: 40px;
+    transition: 0.3s;
+}
+.rowbox h2{
+    color: var(--para-color);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+.rowbox:hover{
+    background-color: var(--accent-color);
+}
+.rowbox:hover h2{
+    color: var(--default-color);
+}
+.rowbox:hover .box-logo {
+    filter: brightness(0) invert(1);
 }

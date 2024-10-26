@@ -700,3 +700,114 @@ ul li{
     background-color: var(--accent-color);
     color: var(--default-color);
 }
+
+
+/* Sec-5 for dogs products */
+
+.sec-5{
+    background-color: var(--dark-background);
+    padding: 3rem 0;
+}
+.product-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 9rem;
+}
+.product-row1 h1{
+    color: var(--default-color);
+}
+
+.product-row2{
+    display: flex;
+    position: relative;
+    width: 81%;
+}
+.product-row2 .product-box{
+    align-items: center;
+    background-color: var(--default-color);
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    position: relative;
+    transition: all 0.3s;
+    width: 210px;
+}
+.product-toprow{
+    height: 200px;
+}
+.product-toprow a{
+    position: absolute;
+    right: 16px;
+    top: 14px;
+}
+.product-toprow a i{
+    color: var(--dark-background);
+    font-size: 2rem;
+}
+.product-toprow img{
+    background-color: var(--default-color);
+    border-radius: 6px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding: 3px;
+    width: 100% !important;
+}
+.product-box:hover{
+    transform: scale(1.05);
+}
+.product-bottomrow{
+    padding: 1rem;
+    padding-left: 1.6rem;
+}
+.product-bottomrow .pinfo-p1{
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin: 0;
+    text-align: center;
+}
+.product-bottomrow .pinfo-p2{
+    color: var(--heading-color);
+    font-size: 1.6rem;
+    margin: 1rem 0 2rem 0;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.product-row3{
+    margin: 3rem 0;
+}
+.product-row3 .goshop{
+    border: 2px solid var(--default-color);
+    color: var(--default-color);
+}
+.product-row3 .goshop:hover{
+    background-color: var(--default-color);
+    color: var(--accent-color);
+}
+
+/* owl carousel edits - pets */
+
+.product-container .owl-carousel .owl-stage-outer {
+    height: 94%;
+}
+.product-container .owl-carousel .owl-stage{
+    margin-top: 1rem;
+}
+.product-container .owl-carousel .owl-nav button.owl-prev,
+.product-container .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    top: 148px;
+}
+.product-container .owl-carousel .owl-nav button.owl-prev{
+    left: -50px;
+}
+.product-container .owl-carousel .owl-nav button.owl-next{
+    right: -50px;
+}

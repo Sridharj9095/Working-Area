@@ -328,14 +328,18 @@ ul li{
     margin: 0 9rem;
     padding: 3rem 0;
 }
-.breeds-row1 h1{
+.row-1 h1{
     font-size: 3rem;
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
-.breeds-row1 h1 span{
+.row-1 h1 span{
     font-weight: 500;
+}
+.breeds-row1 h1, 
+.breeds-row1 h1 span{
+    color: var(--dark-background);
 }
 
 .breeds-row2{
@@ -395,21 +399,22 @@ ul li{
     margin-top: 1.5rem;
     text-transform: uppercase;
 }
-
-.breeds-row3{
+.row-3{
     display: flex;
     margin: 1rem 0;
-
 }
-.breeds-row3 .viewall{
+.row-3 a{
     border-radius: 6px;
-    border: 2px solid var(--accent-color);
     font-size: 1.4rem;
-    letter-spacing: 1px;
-    padding: 1rem 3rem;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
+    padding: 1rem 3rem;
 }
-.breeds-row3 .viewall:hover{
+.breeds-row3 .viewallbreeds{
+    border: 2px solid var(--accent-color);
+    color: var(--dark-background);
+}
+.breeds-row3 .viewallbreeds:hover{
     background-color: var(--accent-color);
     color: var(--default-color);
 }
@@ -441,3 +446,111 @@ ul li{
     transform: scale(1.2);
 }
 
+
+/* Section-3 Featured Dogs */
+
+.sec-3{
+    background-color: var(--accent-color);
+    padding: 3rem 0;
+}
+.feature-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 9rem;
+}
+.feature-row1 h1,
+.feature-row1 h1 span{
+    color: var(--default-color);
+}
+
+.feature-row2{
+    display: flex;
+    flex: 1;
+    width: 80%;
+}
+.feature-box{
+    align-items: center;
+    background-color: var(--default-color);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    position: relative;
+    width: 100%;
+}
+.cfeature{
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem 1rem 0 0;
+    height: 150px;
+    width: 100%;
+}
+.cfeature1{
+    background-image: url(../source/dogs-sellers/dog-1.webp);
+}
+.cfeature2{
+    background-image: url(../source/dogs-sellers/dog-2.webp);
+    background-position: top;
+}
+.cfeature3{
+    background-image: url(../source/dogs-sellers/dog-3.webp);
+}
+.cfeature4{
+    background-image: url(../source/dogs-sellers/dog-4.webp);
+}
+.feature-toprow a{
+    position: absolute;
+    right: 16px;
+    top: 14px;
+}
+.feature-toprow a i{
+    color: var(--default-color);
+    font-size: 2rem;
+}
+.feature-toprow img{
+    background-color: var(--default-color);
+    border-radius: 50%;
+    height: 45px;
+    object-fit: cover;
+    object-position: center;
+    padding: 3px;
+    position: absolute;
+    right: 12px;
+    top: 128px;
+    width: 45px;
+}
+.feature-bottomrow{
+    padding: 1rem;
+    padding-left: 1.6rem;
+}
+.feature-bottomrow .info-p1, 
+.feature-bottomrow .info-p3{
+    color: var(--heading-color);
+    opacity: 0.5;
+}
+.feature-bottomrow .info-p1{}
+.feature-bottomrow .info-p1 i{
+    font-size: 1.6rem
+}
+.feature-bottomrow .info-p2{
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin: 0;
+}
+.feature-bottomrow .info-p3{
+    font-size: 1.6rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.feature-row3 .viewalldogs{
+    border: 2px solid var(--default-color);
+    color: var(--default-color);
+}
+.feature-row3 .viewalldogs:hover{
+    background-color: var(--default-color);
+    color: var(--accent-color);
+}

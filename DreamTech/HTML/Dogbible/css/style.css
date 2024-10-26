@@ -343,11 +343,16 @@ ul li{
     display: flex;
     flex-direction: column;
     width: 90%;
+    height: 350px;
+    justify-content: center;
+    margin-top: 2rem;
+    position: relative;
 }
-.breedicon-toprow{
+.breedsrow2-container{
     display: flex;
     justify-content: center;
     width: 85%;
+    height: 100%;
 }
 .breedicon-box:hover{
     box-shadow: 0 0 15px 0 #0000002e;
@@ -390,15 +395,11 @@ ul li{
     margin-top: 1.5rem;
     text-transform: uppercase;
 }
-.breedicon-bottomrow{
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    width: 85%;
-}
 
 .breeds-row3{
-    margin-top: 6rem;
+    display: flex;
+    margin: 1rem 0;
+
 }
 .breeds-row3 .viewall{
     border-radius: 6px;
@@ -412,3 +413,31 @@ ul li{
     background-color: var(--accent-color);
     color: var(--default-color);
 }
+
+/* Oel carousal edits */
+.breeds-row2 .owl-carousel .owl-stage-outer {
+    height: 94%;
+}
+.breeds-row2 .owl-carousel .owl-stage{
+    margin-top: 1rem;
+}
+.breeds-row2 .owl-carousel .owl-nav button.owl-prev,
+.breeds-row2 .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    top: 148px;
+}
+.breeds-row2 .owl-carousel .owl-nav button.owl-prev{
+    left: -50px;
+}
+.breeds-row2 .owl-carousel .owl-nav button.owl-next{
+    right: -50px;
+}
+.custom-nav{
+    opacity: 0.6;
+    transition: 0.2s;
+    width: 25px;
+}
+.custom-nav:hover{
+    transform: scale(1.2);
+}
+

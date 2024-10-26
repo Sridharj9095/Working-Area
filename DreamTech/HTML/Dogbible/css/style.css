@@ -419,7 +419,7 @@ ul li{
     color: var(--default-color);
 }
 
-/* Oel carousal edits */
+/* Oel carousal edits Breeds */
 .breeds-row2 .owl-carousel .owl-stage-outer {
     height: 94%;
 }
@@ -467,19 +467,22 @@ ul li{
 
 .feature-row2{
     display: flex;
-    flex: 1;
-    width: 80%;
+    width: 81%;
+    position: relative;
+    margin-bottom: 2rem;
 }
 .feature-box{
     align-items: center;
     background-color: var(--default-color);
     border-radius: 1rem;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 1rem;
     position: relative;
-    width: 100%;
+    transition: all 0.3s;
+    width: 210px;
 }
 .cfeature{
     background-position: center;
@@ -501,6 +504,12 @@ ul li{
 .cfeature4{
     background-image: url(../source/dogs-sellers/dog-4.webp);
 }
+.cfeature5{
+    background-image: url(../source/dogs-sellers/dog-5.webp);
+}
+.cfeature6{
+    background-image: url(../source/dogs-sellers/dog-6.webp);
+}
 .feature-toprow a{
     position: absolute;
     right: 16px;
@@ -520,7 +529,7 @@ ul li{
     position: absolute;
     right: 12px;
     top: 128px;
-    width: 45px;
+    width: 45px !important;
 }
 .feature-bottomrow{
     padding: 1rem;
@@ -531,7 +540,6 @@ ul li{
     color: var(--heading-color);
     opacity: 0.5;
 }
-.feature-bottomrow .info-p1{}
 .feature-bottomrow .info-p1 i{
     font-size: 1.6rem
 }
@@ -553,4 +561,35 @@ ul li{
 .feature-row3 .viewalldogs:hover{
     background-color: var(--default-color);
     color: var(--accent-color);
+}
+.feature-box:hover{
+    transform: scale(1.05);
+}
+
+/* owl carousel edits - pets */
+
+.feature-container .owl-carousel .owl-stage-outer {
+    height: 94%;
+}
+.feature-container .owl-carousel .owl-stage{
+    margin-top: 1rem;
+}
+.feature-container .owl-carousel .owl-nav button.owl-prev,
+.feature-container .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    top: 148px;
+}
+.feature-container .owl-carousel .owl-nav button.owl-prev{
+    left: -50px;
+}
+.feature-container .owl-carousel .owl-nav button.owl-next{
+    right: -50px;
+}
+.custom1-nav{
+    filter: brightness(0) invert(1);
+    transition: 0.2s;
+    width: 25px;
+}
+.custom1-nav:hover{
+    transform: scale(1.2);
 }

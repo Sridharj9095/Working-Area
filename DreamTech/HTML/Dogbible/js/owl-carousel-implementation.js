@@ -35,7 +35,7 @@ breedOwl.owlCarousel({
   },
 });
 
-// Second Carousel (Pet Carousel without multiple rows)
+// Second Carousel (Pet Carousel)
 var petOwl = $(".pet-carousel");
 
 petOwl.owlCarousel({

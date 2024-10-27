@@ -523,6 +523,10 @@ ul li{
 .feature-toprow a i{
     color: var(--default-color);
     font-size: 2rem;
+    transition: 0.3s;
+}
+.feature-toprow a:hover i{
+    color: var(--accent-color);
 }
 .feature-toprow img{
     background-color: var(--default-color);
@@ -666,10 +670,18 @@ ul li{
     margin: 2rem;
     overflow: hidden;
     position: relative;
+    transition: 0.3s;
     width: 270px;
 }
-.row2a-box:hover img{
-    transform: scale(1.1);
+.row2a-box:hover{
+    transform: scale(1.05);
+}
+.row2a-box:hover .bow2a-box_content{
+    background-color: var(--accent-color);
+}
+.row2a-box:hover .bow2a-box_content h4,
+.row2a-box:hover .bow2a-box_content p{
+    color: var(--default-color);
 }
 .row2a-box img{
     border-radius: 6px 6px 0 0;
@@ -685,19 +697,22 @@ ul li{
     padding-left: 1.8rem;
     padding: 1rem 1rem 1rem 1.8rem;
     position: absolute;
+    transition: 0.3s;
     width: 250px;
 }
 .bow2a-box_content h4{
     color: var(--para-color);
     font-weight: 500;
     margin: 1rem 0;
+    transition: 0.3s;
 }
 .bow2a-box_content p{
-    font-size: 1.4rem;
-    margin: 0;
-    margin-bottom: 1rem;
-    line-height: 1.4;
     color: var(--heading-color);
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    margin: 0;
+    transition: 0.3s;
 }
 
 .business-row3 .viewmore{
@@ -757,6 +772,10 @@ ul li{
 .product-toprow a i{
     color: var(--dark-background);
     font-size: 2rem;
+    transition: 0.3s;
+}
+.product-toprow a:hover i{
+    color: var(--accent-color);
 }
 .product-toprow img{
     background-color: var(--default-color);

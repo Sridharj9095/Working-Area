@@ -949,7 +949,7 @@ ul li{
     .business-row2{
         flex-wrap: wrap;
         height: auto;
-        width: 90%;
+        width: 100%;
     }
     .business-row2 .row2-box{
         height: 106px;

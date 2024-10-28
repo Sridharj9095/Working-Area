@@ -143,9 +143,9 @@ ul li{
     border-radius: 0.5rem;
     color: var(--default-color);
     display: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0 1rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     text-transform: uppercase;
 }
 .mbl-signin:hover{
@@ -164,7 +164,7 @@ ul li{
         height: 5rem;
     }
     .topbar-container{
-        margin: 0 3rem;
+        margin: 0 2rem;
     }
     .logo .logo-icon{
         height: 25px;
@@ -463,11 +463,13 @@ ul li{
     }
     .sec1-bottomrow{
         margin: 6rem 0 2rem 0;
-        width: 90%;
+        width: 85%;
     }
     .sec1-bottomrow .rowbox{
         height: 110px;
         width: 200px;
+        padding: 1rem;
+        margin: 1rem;
     }
     .rowbox .box-logo{
         margin: 2rem;
@@ -476,6 +478,7 @@ ul li{
     }
     .rowbox h2{
         font-size: 1rem;
+        text-align: center;
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px){}
@@ -623,8 +626,9 @@ ul li{
         margin: 0;
     }
     .row-3 a{
-        font-size: 1rem;
+        font-size: 1.1rem;
         padding: 1rem 2rem;
+        font-weight: 500;
     }
     .breeds-row2 .owl-carousel .owl-nav button.owl-next{
         right: -20px;
@@ -795,7 +799,7 @@ ul li{
         margin: 0 3rem;
     }
     .feature-box{
-        margin-left: 2rem;
+        margin: auto;
     }
     .custom1-nav{
         width: 20px;
@@ -1100,7 +1104,7 @@ ul li{
         width: 70%;
     }
     .product-box{
-        margin-left: 2rem !important;
+        margin: auto !important;
     }
     .custom1-nav{
         width: 20px;

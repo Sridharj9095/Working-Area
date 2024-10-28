@@ -283,7 +283,7 @@ ul li{
     }
     .logo-round{
         height: 100px;
-        left: 256px;
+        left: 235px;
         position: absolute;
         top: 35px;
         width: 100px;
@@ -349,7 +349,7 @@ ul li{
 }
 .form-group label{
     color: #0000008a;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 0.5rem 0 0.5rem 0.2rem;
     text-transform: capitalize;
 }
@@ -433,6 +433,7 @@ ul li{
     .sec1-toprow{
         position: relative;
         top: 35px;
+        width: 75%;
     }
     .search-form{
         flex-direction: column;
@@ -440,7 +441,11 @@ ul li{
     }
     .search-form .form-group{
         border: 0;
+        border-bottom: 1px solid #0000001a;
         width: 100%;
+    }
+    .search-form .form-group:nth-child(3){
+        border-bottom: 0;
     }
     .form-group input{
         font-size: 1.3rem;
@@ -458,6 +463,7 @@ ul li{
     }
     .sec1-bottomrow{
         margin: 6rem 0 2rem 0;
+        width: 90%;
     }
     .sec1-bottomrow .rowbox{
         height: 110px;
@@ -789,7 +795,7 @@ ul li{
         margin: 0 3rem;
     }
     .feature-box{
-        margin-left: 4rem;
+        margin-left: 2rem;
     }
     .custom1-nav{
         width: 20px;
@@ -943,6 +949,7 @@ ul li{
     .business-row2{
         flex-wrap: wrap;
         height: auto;
+        width: 90%;
     }
     .business-row2 .row2-box{
         height: 106px;
@@ -1093,7 +1100,7 @@ ul li{
         width: 70%;
     }
     .product-box{
-        margin-left: 4rem !important;
+        margin-left: 2rem !important;
     }
     .custom1-nav{
         width: 20px;
@@ -1255,7 +1262,8 @@ ul li{
 
 @media (max-width: 767px){
     .magazine-container{
-        margin: 0 3rem;
+        margin: 0;
+        width: 100%;
     }
     .magazine-container .magazine-toprow{
         flex-direction: column;
@@ -1426,6 +1434,7 @@ ul li{
 @media (max-width: 767px){
     .contact-topbar{
         flex-direction: column;
+        width: 100%;
     }
     .left-contact_container{
         align-items: flex-start;
@@ -1437,8 +1446,22 @@ ul li{
         flex-direction: column;
         margin: 2rem 0;
     }
+    .contact-col ul a{
+        font-size: 1.3rem;
+    }
     .right-contact .input-area{
-        margin-bottom: 1rem;
+        margin: 1rem 0;
+        width: 85%;
+    }
+    .social-links{
+        width: 70%;
+    }
+    .social-links a{
+        width: 40px;
+        height: 40px;
+    }
+    .contact-bottombar p{
+        font-size: 1.1rem;
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px){}

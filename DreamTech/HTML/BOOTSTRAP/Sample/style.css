@@ -19,6 +19,9 @@ body{
 .navbar-nav .nav-link.show{
     color: var(--accent-color) !important;
 }
+.collapse .btn{
+    font-size: 14px;
+}
 .collapse .btn:hover{
     background-color: var(--accent-color);
 }
@@ -31,7 +34,11 @@ body{
 .col2 img{
     height: 100%;
     object-fit: cover;
+    transition: 0.3s;
     width: 100%;
+}
+.col2 img:hover{
+    transform: scale(1.02);
 }
 .col .mb-2 i{
     color: var(--accent-color);
@@ -39,7 +46,7 @@ body{
 .container-fluid .row .col{
     background-color: rgba(102, 51, 153, 0.6);
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .container-fluid .row .col h2{
     color: var(--accent-color);
@@ -48,13 +55,26 @@ body{
     background-color: var(--background-color);
     border: 1px solid rgba(102, 51, 153) !important;
 }
+.container-fluid .row .col:hover h2{
+    margin-top: 1rem !important;
+    transition: 0.3s;
+}
 .container-fluid .row .col:hover h1{
     color: var(--dark-color) !important;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .container-fluid .row .col:hover p{
     color: #00000081 !important;
-    transition: 0.5s;
+    margin-bottom: 52px !important;
+    transition: 0.3s;
+}
+.sec-2 .container h3::after{
+    background: var(--accent-color);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin: 4px 10px;
+    width: 120px;
 }
 @media (max-width: 767px){
     .sec-1 .container{

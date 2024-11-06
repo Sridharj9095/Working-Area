@@ -33,17 +33,26 @@ main .carousel .carousel-inner{
     height: 100%;
 }
 .carousel-indicators button{
+    border-radius: 50%;
     display: inline-block;
-    width: 10px !important;
     height: 10px !important;
     margin: 1px;
-    border-radius: 50%;
+    width: 10px !important;
 }
 .carousel-item .container{
-    position: absolute;
-    top: 25%;
-    left: 9%;
+    left: 8%;
+    top: 22%;
 }
-.carousel-item .container button{
+.carousel-item .container a{
     background-color: transparent;
+    width: fit-content;
+}
+.btitle{
+    font-size: 60px;
+    width: fit-content;
+}
+.b-para{
+    color: #80d0de;
+    font-size: 22px;
+    width: fit-content;
 }

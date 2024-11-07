@@ -24,7 +24,7 @@ body{
 /* Banner or hero section */
 
 main{
-    height: 580px;
+    height: 600px;
 }
 main .carousel{
     height: 100%;
@@ -43,9 +43,14 @@ main .carousel .carousel-inner{
     left: 8%;
     top: 22%;
 }
-.carousel-item .container a{
+.learn-more{
     background-color: transparent;
     width: fit-content;
+}
+.learn-more:hover{
+    background-color: #fff;
+    color: #3f5263 !important;
+    transition: 0.4s;
 }
 .btitle{
     font-size: 60px;
@@ -55,4 +60,8 @@ main .carousel .carousel-inner{
     color: #80d0de;
     font-size: 22px;
     width: fit-content;
+}
+.btitle1{
+    color: #bf5757;
+    font-size: 60px;
 }

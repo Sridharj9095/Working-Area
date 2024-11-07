@@ -145,3 +145,46 @@ main .carousel .carousel-inner{
     object-fit: cover;
     width: 80px;
 }
+@media (max-width: 767px){
+    .row.row2 p{
+        padding: 0 40px !important;
+    }
+}
+
+/* Team Section */
+
+.team{
+    background-image: url(img/team-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+.heading::after{
+    background-color: #bf5757;
+    bottom: -50px;
+    content: " ";
+    height: 3px;
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    width: 60px;
+}
+.member img{
+    height: 100%;
+    width: 100%;
+}
+.tm-bg{
+    background-color: rgba(128, 128, 128, 0.158);
+}
+.team-para{
+    font-size: 14px;
+}
+.col-sm-4{
+    cursor: pointer;
+}
+@media (max-width: 767px){
+    .col-sm-4{
+        margin-top: 20px;
+    }
+}

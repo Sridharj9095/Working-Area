@@ -132,3 +132,16 @@ main .carousel .carousel-inner{
         width: 100% !important;
     }
 }
+
+/* about section */
+
+.row1{
+    border: 1px solid #e8ecf1;
+    height: 170px;
+    width: 170px;
+}
+.row1 img{
+    height: 80px;
+    object-fit: cover;
+    width: 80px;
+}

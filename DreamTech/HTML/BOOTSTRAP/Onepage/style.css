@@ -85,7 +85,14 @@ main .carousel .carousel-inner{
 }
 @media (max-width: 767px){
     main{
-        height: auto;
+        height: 350px;
+    }
+    .carousel-item{
+        height: 100%;
+    }
+    .carousel-item img{
+        height: 100%;
+        object-fit: cover;
     }
     .btitle{
         font-size: 24px;
@@ -111,7 +118,17 @@ main .carousel .carousel-inner{
         height: 6px !important;
         width: 6px !important;
     }
+    .carousel-item .container{
+        left: 5%;
+        width: 60% !important;
+    }
     .container.container1{
+        top: 30%;
+        left: 3%;
+    }
+    .container.container2{
         left: 0;
+        top: 30%;
+        width: 100% !important;
     }
 }

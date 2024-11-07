@@ -21,6 +21,24 @@ body{
     border: 1px solid #ffffff2a;
 }
 
+@media (max-width: 767px){
+    .navbar{
+        padding: 10px 0 !important;
+    }
+    .navbar .container{
+        margin: 0 10px;
+    }
+    .navbar-brand{
+        font-size: 16px !important;
+    }
+    .navbar-toggler-icon{
+        filter: brightness(0) invert(1);
+    }
+    .navbar-toggler{
+        border: 1px solid #ffffff81 !important;
+    }
+}
+
 /* Banner or hero section */
 
 main{
@@ -64,4 +82,36 @@ main .carousel .carousel-inner{
 .btitle1{
     color: #bf5757;
     font-size: 60px;
+}
+@media (max-width: 767px){
+    main{
+        height: auto;
+    }
+    .btitle{
+        font-size: 24px;
+        margin-top: 30px !important;
+    }
+    .btitle1{
+        font-size: 24px;
+        margin-top: 10px !important;
+    }
+    .b-para{
+        font-size: 14px;
+        margin-top: 10px !important;
+    }
+    .learn-more{
+        font-size: 10px;
+        margin-top: 14px !important;
+        padding: 5px 10px !important;
+    }
+    .carousel-indicators{
+        margin-bottom: 0 !important;
+    }
+    .carousel-indicators button{
+        height: 6px !important;
+        width: 6px !important;
+    }
+    .container.container1{
+        left: 0;
+    }
 }

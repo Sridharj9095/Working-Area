@@ -1,0 +1,96 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+:root{
+    --accent-color: #0a66c2;
+    --background-color: #fff;
+    --body-background: #f4f2ee;
+    --dark-color: #000;
+}
+body{
+    padding: 0;
+    background-color: var(--body-background);
+}
+.navbar.bg-body-tertiary{
+    background: var(--background-color) !important;
+    height: 55px;
+}
+.navbar .container-fluid, 
+.navbar .container-fluid .container{
+    height: 100%;
+}
+.navbar-brand{
+    background-color: var(--accent-color);
+    border-radius: 3px;
+    height: 34px;
+    width: 34px;
+}
+form{
+    width: 25%;
+}
+form input{
+    background-color: #edf3f8 !important;
+    font-size: 14px !important;
+    padding-left: 40px !important;
+}
+.search-wrapper{
+    position: relative;
+}
+.search-wrapper::before{
+    color: #000000af;
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+    font-size: 13px;
+    font-weight: 900;
+    left: 18px;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+}
+.active i, 
+.active p{
+    color: var(--dark-color) !important;
+}
+.row.header-row{
+    height: 100%;
+}
+.row.header-row .col{
+    cursor: pointer;
+    height: 100%;
+    width: 80px;
+}
+.row.header-row .col i,
+.row.header-row .col p{
+    transition: 0.3s;    
+}
+.row.header-row .col:hover i,
+.row.header-row .col:hover p{
+    color: var(--dark-color) !important;
+}
+.row.header-row .col::after{
+    background-color: var(--dark-color);
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: width 0.3s;
+    visibility: hidden;
+    width: 0;
+}
+.row.header-row .col.active::after{
+    visibility: visible;
+    width: 98%;
+}
+.row.header-row .col p{
+    font-size: 12px;
+}
+.profile{
+    height: 24px;
+    width: 24px;
+}
+.profile img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}

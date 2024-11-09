@@ -69,7 +69,7 @@ form input{
 }
 .row.header-row .col::after{
     background-color: var(--dark-color);
-    bottom: 0;
+    bottom: -8px;
     content: "";
     height: 2px;
     left: 0;
@@ -93,4 +93,21 @@ form input{
     height: 100%;
     object-fit: cover;
     width: 100%;
+}
+
+@media (max-width: 767px){
+    form{
+        width: auto;
+    }
+}
+
+
+/* Main section */
+
+.sidebar-left,
+.main-content,
+.sidebar-right {
+  background-color: var(--background-color);
+  padding: 15px;
+  border-radius: 8px;
 }

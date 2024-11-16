@@ -73,6 +73,32 @@ document.addEventListener("DOMContentLoaded", () => {
         "rounded-pill"
       );
       isValid = false;
+    } else if (typeof firstname.value !== "string" || !isNaN(firstname.value)) {
+      displayError(firstname, "Enter valid name.");
+      firstname.style.setProperty("outline", "0");
+      firstname.style.setProperty("background-color", "rgb(247, 247, 247)");
+      firstname.style.setProperty("padding", "6px 14px");
+      firstname.classList.add(
+        "border",
+        "border-2",
+        "border-danger",
+        "w-100",
+        "rounded-pill"
+      );
+      isValid = false;
+    } else if (firstname.value.length < 3) {
+      displayError(firstname, "Must be min 3 char*.");
+      firstname.style.setProperty("outline", "0");
+      firstname.style.setProperty("background-color", "rgb(247, 247, 247)");
+      firstname.style.setProperty("padding", "6px 14px");
+      firstname.classList.add(
+        "border",
+        "border-2",
+        "border-danger",
+        "w-100",
+        "rounded-pill"
+      );
+      isValid = false;
     } else {
       firstname.style.removeProperty("outline");
       firstname.style.removeProperty("background-color");
@@ -81,6 +107,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (password.value.trim() === "") {
       displayError(password, "Enter password.");
+      password.style.setProperty("outline", "0");
+      password.style.setProperty("background-color", "rgb(247, 247, 247)");
+      password.style.setProperty("padding", "6px 14px");
+      password.classList.add(
+        "border",
+        "border-2",
+        "border-danger",
+        "w-100",
+        "rounded-pill"
+      );
+      isValid = false;
+    } else if (password.value.length < 8) {
+      displayError(password, "Password should be atleast 8 charaters.");
       password.style.setProperty("outline", "0");
       password.style.setProperty("background-color", "rgb(247, 247, 247)");
       password.style.setProperty("padding", "6px 14px");

@@ -9,6 +9,7 @@ body{
     min-height: 100vh;
 }
 .card{
+    height: fit-content;
     max-width: 360px;
     width: 100%; 
 }

@@ -3,11 +3,22 @@
 }
 body{
     padding: 0;
+    background-color: rebeccapurple;
 }
 .container{
     min-height: 100vh;
 }
 .card{
-    max-width: 400px;
+    max-width: 360px;
     width: 100%; 
+}
+.bg{
+    background-color: rgb(247 247 247) !important;
+}
+input::placeholder{
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+#showme{
+    font-size: 14px;
 }

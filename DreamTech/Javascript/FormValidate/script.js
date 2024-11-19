@@ -1,189 +1,188 @@
 function showMe() {
-  const passWord = document.getElementById("password");
-  const confirmPassWord = document.getElementById("confirmpassword");
+  const password = document.getElementById("password");
+  const confirmPassword = document.getElementById("confirmpassword");
   const btnName = document.getElementById("showme");
-  if (passWord.type === "password" && confirmPassWord.type === "password") {
-    passWord.type = "text";
-    confirmPassWord.type = "text";
-    btnName.textContent = "Hide Password";
-  } else {
-    passWord.type = "password";
-    confirmPassWord.type = "password";
-    btnName.textContent = "Show Password";
-  }
+
+  const isPasswordType = password.type === "password";
+  password.type = isPasswordType ? "text" : "password";
+  confirmPassword.type = isPasswordType ? "text" : "password";
+  btnName.textContent = isPasswordType ? "Hide Password" : "Show Password";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const firstname = document.getElementById("firstname");
   const password = document.getElementById("password");
-  const confirmPassWord = document.getElementById("confirmpassword");
+  const confirmPassword = document.getElementById("confirmpassword");
   const email = document.getElementById("email");
-  let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  firstname.addEventListener("keyup", () => {
+    getFirstname();
+  });
+  email.addEventListener("keyup", () => {
+    getEmail();
+  });
+  password.addEventListener("keyup", () => {
+    getPassword();
+  });
+  confirmpassword.addEventListener("keyup", () => {
+    getConfPass();
+  });
+
+  const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const passPattern =
+    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 
   form.addEventListener("submit", (event) => {
     clearErrors();
     let isValid = true;
-    if (email) {
-      let checkIsValidEmail = emailPattern.test(email.value);
-      console.log("checkIsValidEmail", checkIsValidEmail);
-      if (email.value.trim() === "") {
-        displayError(email, "Email is required.");
-        email.style.setProperty("outline", "0");
-        email.style.setProperty("background-color", "rgb(247, 247, 247)");
-        email.style.setProperty("padding", "6px 14px");
-        email.classList.add(
-          "border",
-          "border-2",
-          "border-danger",
-          "w-100",
-          "rounded-pill"
-        );
-        isValid = false;
-      } else if (!checkIsValidEmail) {
-        displayError(email, "Enter a valid email.");
-        email.style.setProperty("outline", "0");
-        email.style.setProperty("background-color", "rgb(247, 247, 247)");
-        email.style.setProperty("padding", "6px 14px");
-        email.classList.add(
-          "border",
-          "border-2",
-          "border-danger",
-          "w-100",
-          "rounded-pill"
-        );
-        isValid = false;
-      } else {
-        email.style.removeProperty("outline");
-        email.style.removeProperty("background-color");
-        email.style.removeProperty("padding");
-        email.classList.remove("border", "border-2", "border-danger");
-      }
-    }
-    if (firstname.value.trim() === "") {
+
+    // Validate firstname
+    if (!firstname.value.trim()) {
       displayError(firstname, "Firstname is required.");
-      firstname.style.setProperty("outline", "0");
-      firstname.style.setProperty("background-color", "rgb(247, 247, 247)");
-      firstname.style.setProperty("padding", "6px 14px");
-      firstname.classList.add(
-        "border",
-        "border-2",
-        "border-danger",
-        "w-100",
-        "rounded-pill"
-      );
+      applyErrorStyles(firstname);
       isValid = false;
     } else if (typeof firstname.value !== "string" || !isNaN(firstname.value)) {
-      displayError(firstname, "Enter valid name.");
-      firstname.style.setProperty("outline", "0");
-      firstname.style.setProperty("background-color", "rgb(247, 247, 247)");
-      firstname.style.setProperty("padding", "6px 14px");
-      firstname.classList.add(
-        "border",
-        "border-2",
-        "border-danger",
-        "w-100",
-        "rounded-pill"
-      );
+      displayError(firstname, "Enter a valid name.");
+      applyErrorStyles(firstname);
       isValid = false;
     } else if (firstname.value.length < 3) {
-      displayError(firstname, "Must be min 3 char*.");
-      firstname.style.setProperty("outline", "0");
-      firstname.style.setProperty("background-color", "rgb(247, 247, 247)");
-      firstname.style.setProperty("padding", "6px 14px");
-      firstname.classList.add(
-        "border",
-        "border-2",
-        "border-danger",
-        "w-100",
-        "rounded-pill"
-      );
+      displayError(firstname, "Must be at least 3 characters.");
+      applyErrorStyles(firstname);
       isValid = false;
     } else {
-      firstname.style.removeProperty("outline");
-      firstname.style.removeProperty("background-color");
-      firstname.style.removeProperty("padding");
-      firstname.classList.remove("border", "border-2", "border-danger");
+      removeErrorStyles(firstname);
     }
-    if (password.value.trim() === "") {
+
+    // Validate email
+    if (!email.value.trim()) {
+      displayError(email, "Email is required.");
+      applyErrorStyles(email);
+      isValid = false;
+    } else if (!emailPattern.test(email.value)) {
+      displayError(email, "Enter a valid email.");
+      applyErrorStyles(email);
+      isValid = false;
+    } else {
+      removeErrorStyles(email);
+    }
+
+    // Validate password
+    if (!password.value.trim()) {
       displayError(password, "Enter password.");
-      password.style.setProperty("outline", "0");
-      password.style.setProperty("background-color", "rgb(247, 247, 247)");
-      password.style.setProperty("padding", "6px 14px");
-      password.classList.add(
-        "border",
-        "border-2",
-        "border-danger",
-        "w-100",
-        "rounded-pill"
-      );
+      applyErrorStyles(password);
       isValid = false;
-    } else if (password.value.length < 8) {
-      displayError(password, "Password should be atleast 8 charaters.");
-      password.style.setProperty("outline", "0");
-      password.style.setProperty("background-color", "rgb(247, 247, 247)");
-      password.style.setProperty("padding", "6px 14px");
-      password.classList.add(
-        "border",
-        "border-2",
-        "border-danger",
-        "w-100",
-        "rounded-pill"
-      );
+    } else if (!passPattern.test(password.value)) {
+      displayError(password, "Password must meet the required criteria.");
+      applyErrorStyles(password);
       isValid = false;
     } else {
-      password.style.removeProperty("outline");
-      password.style.removeProperty("background-color");
-      password.style.removeProperty("padding");
-      password.classList.remove("border", "border-2", "border-danger");
+      removeErrorStyles(password);
     }
-    if (confirmPassWord.value.trim() === "") {
-      displayError(confirmPassWord, "Enter confirm password.");
-      confirmPassWord.style.setProperty("outline", "0");
-      confirmPassWord.style.setProperty(
-        "background-color",
-        "rgb(247, 247, 247)"
-      );
-      confirmPassWord.style.setProperty("padding", "6px 14px");
-      confirmPassWord.classList.add(
-        "border",
-        "border-2",
-        "border-danger",
-        "w-100",
-        "rounded-pill"
-      );
+
+    // Validate confirm password
+    if (!confirmPassword.value.trim()) {
+      displayError(confirmPassword, "Enter confirm password.");
+      applyErrorStyles(confirmPassword);
+      isValid = false;
+    } else if (password.value !== confirmPassword.value) {
+      displayError(confirmPassword, "Passwords must match.");
+      applyErrorStyles(confirmPassword);
       isValid = false;
     } else {
-      confirmPassWord.style.removeProperty("outline");
-      confirmPassWord.style.removeProperty("background-color");
-      confirmPassWord.style.removeProperty("padding");
-      confirmPassWord.classList.remove("border", "border-2", "border-danger");
+      removeErrorStyles(confirmPassword);
     }
-    if (
-      password.value !== confirmPassWord.value &&
-      confirmPassWord.value.trim() !== ""
-    ) {
-      displayError(confirmPassWord, "Confirm password must match.");
-      confirmPassWord.style.setProperty("outline", "0");
-      confirmPassWord.style.setProperty(
-        "background-color",
-        "rgb(247, 247, 247)"
-      );
-      confirmPassWord.style.setProperty("padding", "6px 14px");
-      confirmPassWord.classList.add(
-        "border",
-        "border-2",
-        "border-danger",
-        "w-100",
-        "rounded-pill"
-      );
-      isValid = false;
-    }
+
     if (!isValid) {
       event.preventDefault();
     }
   });
 });
+
+function getFirstname() {
+  const firstname = document.getElementById("firstname");
+  const value = firstname.value.trim();
+  const firstnameError = document.querySelector("#firstname + .text-danger");
+  if (firstnameError) {
+    firstnameError.remove();
+  }
+  // Clear existing errors for this field
+  if (!value) {
+    displayError(firstname, "Firstname is required.");
+    applyErrorStyles(firstname);
+  } else if (!isNaN(value)) {
+    displayError(firstname, "Enter a valid name.");
+    applyErrorStyles(firstname);
+  } else if (value.length < 3) {
+    displayError(firstname, "Must be at least 3 characters.");
+    applyErrorStyles(firstname);
+  } else {
+    removeErrorStyles(firstname);
+  }
+}
+function getEmail() {
+  const email = document.getElementById("email");
+  const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const emailError = document.querySelector("#email + .text-danger");
+  if (emailError) {
+    emailError.remove();
+  }
+  // Clear existing errors for this field
+  if (!email.value.trim()) {
+    displayError(email, "Email is required.");
+    applyErrorStyles(email);
+    isValid = false;
+  } else if (!emailPattern.test(email.value)) {
+    displayError(email, "Enter a valid email.");
+    applyErrorStyles(email);
+    isValid = false;
+  } else {
+    removeErrorStyles(email);
+  }
+}
+function getPassword() {
+  const password = document.getElementById("password");
+  const passPattern =
+    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+  const passwordError = document.querySelector("#password + .text-danger");
+  if (passwordError) {
+    passwordError.remove();
+  }
+  // Clear existing errors for this field
+  if (!password.value.trim()) {
+    displayError(password, "Enter password.");
+    applyErrorStyles(password);
+    isValid = false;
+  } else if (!passPattern.test(password.value)) {
+    displayError(password, "Password must meet the required criteria.");
+    applyErrorStyles(password);
+    isValid = false;
+  } else {
+    removeErrorStyles(password);
+  }
+}
+
+// Clear existing errors for confirm password field
+function getConfPass() {
+  const confirmPassword = document.getElementById("confirmpassword");
+  const confirmpasswordError = document.querySelector(
+    "#confirmpassword + .text-danger"
+  );
+  if (confirmpasswordError) {
+    confirmpasswordError.remove();
+  }
+  if (!confirmPassword.value.trim()) {
+    displayError(confirmPassword, "Enter confirm password.");
+    applyErrorStyles(confirmPassword);
+    isValid = false;
+  } else if (password.value !== confirmPassword.value) {
+    displayError(confirmPassword, "Passwords must match.");
+    applyErrorStyles(confirmPassword);
+    isValid = false;
+  } else {
+    removeErrorStyles(confirmPassword);
+  }
+}
 
 function displayError(input, message) {
   const error = document.createElement("small");
@@ -194,4 +193,24 @@ function displayError(input, message) {
 
 function clearErrors() {
   document.querySelectorAll(".text-danger").forEach((el) => el.remove());
+}
+
+function applyErrorStyles(input) {
+  input.style.setProperty("outline", "0");
+  input.style.setProperty("background-color", "rgb(247, 247, 247)");
+  input.style.setProperty("padding", "6px 14px");
+  input.classList.add(
+    "border",
+    "border-2",
+    "border-danger",
+    "w-100",
+    "rounded-pill"
+  );
+}
+
+function removeErrorStyles(input) {
+  input.style.removeProperty("outline");
+  input.style.removeProperty("background-color");
+  input.style.removeProperty("padding");
+  input.classList.remove("border", "border-2", "border-danger");
 }

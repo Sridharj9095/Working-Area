@@ -12,9 +12,10 @@ function showMe() {
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const firstname = document.getElementById("firstname");
+  const fullname = document.getElementById("fullname");
+  const email = document.getElementById("email");
   const password = document.getElementById("password");
   const confirmPassword = document.getElementById("confirmpassword");
-  const email = document.getElementById("email");
 
   firstname.addEventListener("keyup", () => {
     getFirstname();
@@ -25,10 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
   password.addEventListener("keyup", () => {
     getPassword();
   });
-  confirmpassword.addEventListener("keyup", () => {
+  confirmPassword.addEventListener("keyup", () => {
     getConfPass();
   });
 
+  const namePattern = /^[A-Za-z]+$/;
   const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   const passPattern =
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
@@ -39,15 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Validate firstname
     if (!firstname.value.trim()) {
-      displayError(firstname, "Firstname is required.");
+      displayError(fullname, "Firstname is required.");
       applyErrorStyles(firstname);
       isValid = false;
-    } else if (typeof firstname.value !== "string" || !isNaN(firstname.value)) {
-      displayError(firstname, "Enter a valid name.");
+    } else if (!namePattern.test(firstname.value.trim())) {
+      displayError(fullname, "Enter a valid name.");
       applyErrorStyles(firstname);
       isValid = false;
-    } else if (firstname.value.length < 3) {
-      displayError(firstname, "Must be at least 3 characters.");
+    } else if (firstname.value.length < 4) {
+      displayError(fullname, "Must be at least 4 characters.");
       applyErrorStyles(firstname);
       isValid = false;
     } else {
@@ -99,27 +101,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Clear existing errors for name field
 function getFirstname() {
   const firstname = document.getElementById("firstname");
+  const fullname = document.getElementById("fullname");
+  const namePattern = /^[A-Za-z]+$/;
   const value = firstname.value.trim();
-  const firstnameError = document.querySelector("#firstname + .text-danger");
-  if (firstnameError) {
-    firstnameError.remove();
+  const existingError = fullname.querySelector(".text-danger");
+  if (existingError) {
+    existingError.remove();
   }
-  // Clear existing errors for this field
   if (!value) {
-    displayError(firstname, "Firstname is required.");
+    displayError(fullname, "Firstname is required.");
     applyErrorStyles(firstname);
-  } else if (!isNaN(value)) {
-    displayError(firstname, "Enter a valid name.");
+  } else if (!namePattern.test(value)) {
+    displayError(fullname, "Enter a valid name.");
     applyErrorStyles(firstname);
-  } else if (value.length < 3) {
-    displayError(firstname, "Must be at least 3 characters.");
+  } else if (value.length < 4) {
+    displayError(fullname, "Must be at least 4 characters.");
     applyErrorStyles(firstname);
   } else {
     removeErrorStyles(firstname);
   }
 }
+// Clear existing errors for email field
 function getEmail() {
   const email = document.getElementById("email");
   const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -127,7 +132,6 @@ function getEmail() {
   if (emailError) {
     emailError.remove();
   }
-  // Clear existing errors for this field
   if (!email.value.trim()) {
     displayError(email, "Email is required.");
     applyErrorStyles(email);
@@ -140,6 +144,7 @@ function getEmail() {
     removeErrorStyles(email);
   }
 }
+// Clear existing errors for password field
 function getPassword() {
   const password = document.getElementById("password");
   const passPattern =
@@ -148,7 +153,6 @@ function getPassword() {
   if (passwordError) {
     passwordError.remove();
   }
-  // Clear existing errors for this field
   if (!password.value.trim()) {
     displayError(password, "Enter password.");
     applyErrorStyles(password);

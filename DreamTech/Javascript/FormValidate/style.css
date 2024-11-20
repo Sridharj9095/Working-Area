@@ -23,3 +23,12 @@ input::placeholder{
 #showme{
     font-size: 14px;
 }
+.font{
+    font-size: 14px;
+    color: #000000b4;
+}
+#countryflag{
+    width: 50px;
+    height: 38px;
+    object-fit: cover;
+}

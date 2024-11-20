@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const firstname = document.getElementById("firstname");
   const fullname = document.getElementById("fullname");
   const email = document.getElementById("email");
+  const country = document.getElementById("country");
+  const countryerror = document.getElementById("countryerror");
   const password = document.getElementById("password");
   const confirmPassword = document.getElementById("confirmpassword");
 
@@ -22,6 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   email.addEventListener("keyup", () => {
     getEmail();
+  });
+  country.addEventListener("change", () => {
+    getCountryValue();
   });
   password.addEventListener("keyup", () => {
     getPassword();
@@ -69,6 +74,15 @@ document.addEventListener("DOMContentLoaded", () => {
       removeErrorStyles(email);
     }
 
+    // Validate country
+    if (!country.value.trim()) {
+      displayError(countryerror, "Select your country.");
+      applyErrorStyles(country);
+      isValid = false;
+    } else {
+      removeErrorStyles(country);
+    }
+
     // Validate password
     if (!password.value.trim()) {
       displayError(password, "Enter password.");
@@ -101,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Clear existing errors for name field
 function getFirstname() {
   const firstname = document.getElementById("firstname");
   const fullname = document.getElementById("fullname");
@@ -124,7 +137,6 @@ function getFirstname() {
     removeErrorStyles(firstname);
   }
 }
-// Clear existing errors for email field
 function getEmail() {
   const email = document.getElementById("email");
   const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -135,16 +147,46 @@ function getEmail() {
   if (!email.value.trim()) {
     displayError(email, "Email is required.");
     applyErrorStyles(email);
-    isValid = false;
   } else if (!emailPattern.test(email.value)) {
     displayError(email, "Enter a valid email.");
     applyErrorStyles(email);
-    isValid = false;
   } else {
     removeErrorStyles(email);
   }
 }
-// Clear existing errors for password field
+function getCountryValue() {
+  const country = document.getElementById("country");
+  const countryflag = document.getElementById("countryflag");
+  const countryerror = document.getElementById("countryerror");
+  const existingError = countryerror.querySelector(".text-danger");
+  countryflag.style = "display:inline";
+  if (existingError) {
+    existingError.remove();
+  }
+  if (!country.value.trim()) {
+    countryflag.style = "display:none";
+    displayError(countryerror, "Select your country.");
+    applyErrorStyles(country);
+  } else if (country.value == "Australia") {
+    countryflag.src = "source/Australia.png";
+    removeErrorStyles(country);
+  } else if (country.value == "Germany") {
+    countryflag.src = "source/Germany.png";
+    removeErrorStyles(country);
+  } else if (country.value == "India") {
+    countryflag.src = "source/India.png";
+    removeErrorStyles(country);
+  } else if (country.value == "Russia") {
+    countryflag.src = "source/Russia.png";
+    removeErrorStyles(country);
+  } else if (country.value == "America") {
+    countryflag.src = "source/America.png";
+    removeErrorStyles(country);
+  } else {
+    removeErrorStyles(country);
+  }
+}
+
 function getPassword() {
   const password = document.getElementById("password");
   const passPattern =
@@ -153,20 +195,17 @@ function getPassword() {
   if (passwordError) {
     passwordError.remove();
   }
-  if (!password.value.trim()) {
+  if (!password.value) {
     displayError(password, "Enter password.");
     applyErrorStyles(password);
-    isValid = false;
   } else if (!passPattern.test(password.value)) {
     displayError(password, "Password must meet the required criteria.");
     applyErrorStyles(password);
-    isValid = false;
   } else {
     removeErrorStyles(password);
   }
 }
 
-// Clear existing errors for confirm password field
 function getConfPass() {
   const confirmPassword = document.getElementById("confirmpassword");
   const confirmpasswordError = document.querySelector(
@@ -178,11 +217,9 @@ function getConfPass() {
   if (!confirmPassword.value.trim()) {
     displayError(confirmPassword, "Enter confirm password.");
     applyErrorStyles(confirmPassword);
-    isValid = false;
   } else if (password.value !== confirmPassword.value) {
     displayError(confirmPassword, "Passwords must match.");
     applyErrorStyles(confirmPassword);
-    isValid = false;
   } else {
     removeErrorStyles(confirmPassword);
   }

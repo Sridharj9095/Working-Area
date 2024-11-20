@@ -166,14 +166,15 @@ header{
     padding: 0;
 }
 .nav-menu .nav-list{
-    margin: 0 2px;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     background: rgba(26, 26, 26, 0.34);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(12.1px);
     border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 0 2px;
     padding: 6px 14px;
     position: relative;
-    cursor: pointer;
     transition: all 0.6s ease;
 }
 .nav-menu .nav-list .nav-name{

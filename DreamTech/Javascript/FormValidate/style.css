@@ -28,7 +28,8 @@ input::placeholder{
     color: #000000b4;
 }
 #countryflag{
-    width: 50px;
+    display: none;
     height: 38px;
     object-fit: cover;
+    width: 50px;
 }

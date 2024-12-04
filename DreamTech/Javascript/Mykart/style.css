@@ -1,0 +1,75 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+:root{
+    --accent-color: #0a66c2;
+    --background-color: #fff;
+    --body-background: #f4f2ee;
+    --dark-color: #000;
+}
+body{
+    background-color: var(--body-background);
+    color: var(--dark-color);
+    padding: 0;
+}
+.navbar.bg-body-tertiary{
+    background: var(--background-color) !important;
+    height: 70px;
+}
+.navbar .container-fluid, 
+.navbar .container-fluid .container{
+    height: 100%;
+}
+.navbar-brand::before{
+    bottom: 15px;
+    content: "k";
+    font-size: 11px;
+    left: 46px;
+    opacity: 0.6;
+    position: absolute;
+}
+.searchbar{
+    background-color: #edf3f8;
+    border: 0;
+    outline: none;
+}
+
+/* Hero section */
+.hero{
+    background-color: var(--background-color);
+}
+.row-section{
+    height: auto;
+}
+.product{
+    height: -webkit-fill-available;
+}
+.product img{
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+}
+.green-text{
+    color: #26a541;
+}
+.green-back{
+    background-color: #26a541;
+    font-size: 15px;
+    width: fit-content;
+}
+.fa-star{
+    font-size: 10px;
+}
+.size span{
+    cursor: pointer;
+}
+.applycoupon{
+    font-size: 14px;
+}
+.counter-input{
+    width: 100px;
+}
+.btn-primary{
+    width: fit-content;
+}

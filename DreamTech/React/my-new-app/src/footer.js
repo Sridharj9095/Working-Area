@@ -1,16 +1,16 @@
 import "./App.css";
 
-function Footer() {
+const Footer = () => {
   return (
     <div className="footer">
-      <span>Copyright to company name</span>
+      <span>Copyright to APJ DreamTech</span>
       <span>
         Contact us :{" "}
-        <a href="mailto:abc@abc.com" className="contact">
-          abc@abc.com
+        <a href="mailto:drapjdreamtech@gmail.com" className="contact">
+          drapjdreamtech@gmail.com
         </a>
       </span>
     </div>
   );
-}
+};
 export default Footer;

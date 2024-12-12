@@ -1,28 +1,29 @@
-function Header() {
+import { Link } from "react-router-dom";
+const Header = () => {
   return (
     <div className="header">
       <div className="container">
-        <h1 className="logo">Logo</h1>
+        <h1 className="logo">DreamTech</h1>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#products">Products</a>
+            <Link to="/products">Products</Link>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <Link to="/services">Services</Link>
           </li>
           <li>
-            <a href="#about">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="#contact">Contact Us</a>
+            <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
         <button>Get Started</button>
       </div>
     </div>
   );
-}
+};
 export default Header;

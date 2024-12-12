@@ -9,6 +9,11 @@ ul li{
 a{
   color: #fff;
   text-decoration: none;
+  transition: 0.3s;
+}
+ul li a:hover,
+ul li a:focus{
+  color: yellow;
 }
 .header{
   background-color: rebeccapurple;
@@ -30,6 +35,7 @@ ul li{
 button{
   border-radius: 10px;
   border: none;
+  cursor: pointer;
   padding: 10px 20px;
 }
 .banner{
@@ -38,6 +44,7 @@ button{
   text-align: center;
 }
 .banner h1{
+  margin-top: 10px;
   font-size: 50px;
 }
 .banner h4{
@@ -48,7 +55,7 @@ button{
 }
 .footer{
   align-items: center;
-  background-color: #000;
+  background-color: #000000cc;
   display: flex;
   justify-content: center;
   padding: 20px;

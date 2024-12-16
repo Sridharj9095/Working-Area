@@ -1,19 +1,61 @@
+import { useState } from "react";
+
 const Services = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+
+  const validateForm = (event) => {
+    event.preventDefault();
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Mobile:", mobile);
+  };
+
   return (
     <div className="banner">
-      <h1>Services</h1>
-      <h4>HTML, CSS, JavaScript, and popular frameworks</h4>
-      <p>
-        This Full Stack Course covers everything from front-end design to
-        back-end development, equipping you with the skills to create complete
-        and professional-grade projects.
-      </p>
-      <p>
-        Dive deep into the world of web development, mastering essential
-        front-end technologies like HTML, CSS, JavaScript, and popular
-        frameworks such as React or Angular.
-      </p>
+      <form onSubmit={validateForm}>
+        <div className="form-group">
+          <label>Full Name</label>
+          <input
+            type="text"
+            id="uname"
+            className="inputfield"
+            placeholder="Enter your name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>Email</label>
+          <input
+            type="email"
+            id="email"
+            className="inputfield"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>Mobile number</label>
+          <input
+            type="number"
+            id="mobile"
+            className="inputfield"
+            placeholder="Enter mobile number"
+            value={mobile}
+            onChange={(event) => setMobile(event.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <button type="submit" className="submitbtn">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
+
 export default Services;

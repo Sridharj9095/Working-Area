@@ -11,9 +11,14 @@ a{
   text-decoration: none;
   transition: 0.3s;
 }
-ul li a:hover,
-ul li a:focus{
-  color: yellow;
+ul li a:hover, 
+.active{
+  color: orange;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .header{
   background-color: rebeccapurple;

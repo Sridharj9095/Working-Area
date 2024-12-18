@@ -65,7 +65,8 @@ button{
   justify-content: center;
   padding: 20px;
 }
-span{
+.copyright{
+  font-size: 14px;
   margin: 0 40px;
 }
 .contact:hover{
@@ -76,10 +77,11 @@ span{
 /* services */
 form{
   margin: auto;
+  padding: 10px;
   width: fit-content;
 }
 .form-group{
-  align-items: center;
+  align-items: baseline;
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
@@ -100,4 +102,15 @@ form{
   color: #fff;
   margin: auto;
   padding: 10px 44px;
+}
+.inputarea{
+  display: flex;
+  flex-direction: column;
+}
+.warning{
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  padding-left: 15px;
+  text-align: start;
 }

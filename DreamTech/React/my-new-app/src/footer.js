@@ -3,8 +3,8 @@ import "./App.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <span>Copyright to APJ DreamTech</span>
-      <span>
+      <span className="copyright">Copyright to APJ DreamTech</span>
+      <span className="copyright">
         Contact us :{" "}
         <a href="mailto:drapjdreamtech@gmail.com" className="contact">
           drapjdreamtech@gmail.com

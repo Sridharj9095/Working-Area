@@ -114,3 +114,54 @@ form{
   padding-left: 15px;
   text-align: start;
 }
+.userbanner{
+  padding-top: 0;
+}
+.usermenu{
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+}
+.userlist{
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 10px 0;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+.userlist:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+.userlist img {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+.userlist p {
+  margin: 0;
+}
+.usermail {
+  color: #007BFF;
+  font-weight: bold;
+}
+.usermail:hover {
+  text-decoration: underline;
+}
+
+/* if no data on api */
+.no-users .usermenu, 
+.hidden {
+  display: none;
+}
+.no-users {
+  padding-top: 0;
+  background-color: #f7f7f7;
+}

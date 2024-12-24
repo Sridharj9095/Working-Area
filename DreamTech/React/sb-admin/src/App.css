@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.container-body {
+  background-color: rgb(13 110 253);
+  min-height: 600px;
+}
+footer {
+  height: 60px;
+}
+.dashboard {
+  background-color: rgb(13 110 253) !important;
+}

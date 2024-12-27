@@ -1,0 +1,33 @@
+body {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s;
+}
+.app {
+  display: flex;
+  justify-content: space-between;
+}
+.calendar {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.fullvh {
+  height: 100vh;
+}
+.css-1wvake5 {
+  height: 100%;
+}
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f4f4f4;
+  font-size: 12px;
+  color: #333;
+  border-top: 1px solid #ddd;
+}

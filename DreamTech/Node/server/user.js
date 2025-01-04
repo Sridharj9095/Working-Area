@@ -1,26 +1,20 @@
 const express = require("express");
 const Router = express.Router();
 const bcrypt = require("bcrypt");
+const EmployeeModel = require("./employeeschema");
 const saltRounds = 10;
 
-let dummyUserList = [
-  { id: 1, name: "sridhar", email: "sridhar@gmail.com" },
-  { id: 2, name: "sarath", email: "sarath@gmail.com" },
-  { id: 3, name: "suresh", email: "suresh@gmail.com" },
-  { id: 4, name: "sowndhar", email: "sowndhar@gmail.com" },
-  { id: 5, name: "srinath", email: "srinath@gmail.com" },
-];
-
-Router.get("/userList", (req, res) => {
+Router.get("/userlist", async (req, res) => {
+  let userList = await EmployeeModel.find({});
   res.send({
     status: 1,
-    count: dummyUserList.length,
-    data: dummyUserList,
+    count: userList.length,
+    data: userList,
   });
 });
 
-Router.post("/addUser", (req, res) => {
-  console.log("------Body------", req.body);
+Router.post("/adduser", async (req, res) => {
+  console.log("------Request Body------", req.body);
   const { name, email, password } = req.body;
 
   if (!name || !email || !password) {
@@ -42,39 +36,75 @@ Router.post("/addUser", (req, res) => {
       .send({ status: 0, message: "Invalid email format." });
   }
 
-  const existingUser = dummyUserList.find((user) => user.email === email);
-  if (existingUser) {
-    return res
-      .status(400)
-      .send({ status: 0, message: "Email already in use." });
-  }
-
   const passwordPattern =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   if (!passwordPattern.test(password)) {
     return res.status(400).send({
       status: 0,
-      message: "Password must follow a strong pattern.",
+      message:
+        "Password must follow a strong pattern (min. 8 chars, 1 uppercase, 1 lowercase, 1 special char, 1 number).",
     });
   }
 
-  const hashedPassword = bcrypt.hashSync(password, saltRounds);
+  try {
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-  const newUser = {
-    id: dummyUserList.length + 1,
-    name,
-    email,
-    password: hashedPassword,
-  };
+    const existingUser = await EmployeeModel.findOne({ email });
+    if (existingUser) {
+      return res
+        .status(400)
+        .send({ status: 0, message: "Email already exists." });
+    }
 
-  dummyUserList.push(newUser);
+    const newUser = new EmployeeModel({
+      name,
+      email,
+      password: hashedPassword,
+      status: true,
+    });
 
-  res
-    .status(201)
-    .send({ status: 1, message: "User added successfully", data: newUser });
+    const result = await newUser.save();
+    res
+      .status(201)
+      .send({ message: "User added successfully", id: result._id });
+  } catch (error) {
+    console.error("Error adding user:", error);
+    res.status(500).send({ status: 0, message: "Internal server error" });
+  }
 });
 
-Router.post("/changeUserStatus", (req, res) => {
+Router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res
+      .status(400)
+      .send({ status: 0, message: "All fields are required." });
+  }
+
+  try {
+    const user = await EmployeeModel.findOne({ email });
+    if (!user) {
+      return res
+        .status(400)
+        .send({ status: 0, message: "Email doesn't exist in DB." });
+    }
+
+    const isMatch = bcrypt.compareSync(password, user.password);
+    if (!isMatch) {
+      return res
+        .status(400)
+        .send({ status: 0, message: "Incorrect password." });
+    }
+
+    res.send({ status: 1, message: "Login successful.", userid: user._id });
+  } catch (error) {
+    console.error("Error logging in.", error);
+    res.status(500).send({ status: 0, message: "Internal server error..." });
+  }
+});
+
+Router.post("/changestatus", (req, res) => {
   res.send({ status: 1, message: "Status changed successfully" });
 });
 

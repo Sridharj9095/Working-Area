@@ -1,10 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const User = require("./user");
 
 const app = express();
 const hostname = "localhost";
 const port = 8000;
+
+app.use(cors());
 
 const dbConnection = mongoose
   .connect("mongodb://0.0.0.0:27017/hrms")

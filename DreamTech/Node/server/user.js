@@ -1,16 +1,24 @@
 const express = require("express");
 const Router = express.Router();
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 const EmployeeModel = require("./employeeschema");
 const saltRounds = 10;
 
 Router.get("/userlist", async (req, res) => {
-  let userList = await EmployeeModel.find({});
-  res.send({
-    status: 1,
-    count: userList.length,
-    data: userList,
-  });
+  try {
+    const decoded = jwt.verify(req.headers.authorization, "Secretkey@123");
+    console.log("Decoded token:", decoded);
+    let userList = await EmployeeModel.find({});
+    res.send({
+      status: 1,
+      count: userList.length,
+      data: userList,
+    });
+  } catch (error) {
+    console.error("Error fetching user list:", error);
+    res.status(500).send({ status: 0, message: error.message });
+  }
 });
 
 Router.post("/adduser", async (req, res) => {
@@ -97,7 +105,9 @@ Router.post("/login", async (req, res) => {
         .send({ status: 0, message: "Incorrect password." });
     }
 
-    res.send({ status: 1, message: "Login successful.", userid: user._id });
+    const token = jwt.sign({ email, password }, "Secretkey@123");
+
+    res.send({ status: 1, message: "Login successful.", authtoken: token });
   } catch (error) {
     console.error("Error logging in.", error);
     res.status(500).send({ status: 0, message: "Internal server error..." });

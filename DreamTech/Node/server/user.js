@@ -8,7 +8,7 @@ const saltRounds = 10;
 Router.get("/userlist", async (req, res) => {
   try {
     const decoded = jwt.verify(req.headers.authorization, "Secretkey@123");
-    console.log("Decoded token:", decoded);
+    // console.log("Decoded token:", decoded);
     let userList = await EmployeeModel.find({});
     res.send({
       status: 1,

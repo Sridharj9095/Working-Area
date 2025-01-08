@@ -35,7 +35,7 @@ function Userpage() {
       <Table responsive striped bordered>
         <thead>
           <tr className="text-center">
-            <th>#</th>
+            <th>Id</th>
             <th>Name</th>
             <th>Email</th>
             <th>Actions</th>

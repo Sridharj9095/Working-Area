@@ -13,6 +13,11 @@ body {
 .bg-body-tertiary {
   background-color: #fff !important;
 }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 .navbar-collapse {
   flex-grow: 0;
 }
@@ -23,7 +28,7 @@ body {
   text-decoration-color: rgb(181, 181, 181);
 }
 
-.section__pic-container {
+.profilepic-container {
   height: 350px;
   width: 350px;
 }
@@ -34,9 +39,22 @@ body {
 .icon-box {
   cursor: pointer;
   height: 2rem;
-  background-color: red;
   width: 2rem;
 }
+.card {
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.card:hover {
+  box-shadow: 0 0 5px 5px hsl(0, 0%, 80%);
+  transform: translateY(-10px);
+}
+.card:hover img {
+  transform: scale(1.1);
+  transition: all ease-in 0.4s;
+}
+
 @media screen and (max-width: 767px) {
   .media {
     flex-direction: column;
@@ -44,7 +62,7 @@ body {
   #portfolio {
     overflow-x: hidden;
   }
-  .section__pic-container {
+  .profilepic-container {
     height: 300px;
     width: 300px;
     margin: 0 auto;
